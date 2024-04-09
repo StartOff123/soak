@@ -1,0 +1,1835 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <title>SOAK</title>
+  </head>
+  <body data-page="home" class="bg-zinc-950">
+    <!-- Header -->
+    <header
+      class="fixed w-full bg-black/50 h-[75px] backdrop-blur-[50px] z-[5] transition-all duration-700 overflow-hidden max-md:h-[55px]"
+    >
+      <div class="main-container h-full max-h-[75px] max-md:max-h-[55px]">
+        <div class="flex h-full items-center justify-between">
+          <button
+            id="burger-menu-btn"
+            onclick="openCloseMenu()"
+            class="hidden relative w-[18px] h-[18px] max-md:block transition-all duration-700"
+          >
+            <span
+              class="absolute w-full h-0.5 bg-white left-0 top-0 transition-all duration-700 rounded"
+            ></span>
+            <span
+              class="absolute w-full h-0.5 bg-white left-0 top-1/2 -translate-y-1/2 transition-all duration-700 rounded"
+            ></span>
+            <span
+              class="absolute w-full h-0.5 bg-white left-0 bottom-0 transition-all duration-700 rounded"
+            ></span>
+          </button>
+          <div class="flex h-full gap-x-10 max-lg:gap-x-4">
+            <a href="" class="flex items-center">
+              <img
+                src="assets/icons/logo.svg"
+                alt="logo"
+                class="max-md:hidden"
+              />
+              <img
+                src="assets/icons/logo-mobile.svg"
+                alt="logo"
+                class="block md:hidden"
+              />
+            </a>
+            <nav
+              class="flex items-center gap-x-10 max-lg:gap-x-4 max-lg:text-sm max-md:hidden"
+            >
+              <a
+                id="header-link"
+                data-page="home"
+                href="index.html"
+                class="text-zinc-500 hover:text-white h-full flex items-center transition duration-700 link-active"
+                >Главная</a
+              >
+              <a
+                id="header-link"
+                data-page="products"
+                href="product.html"
+                class="text-zinc-500 hover:text-white h-full flex items-center transition duration-700"
+                >Продукция</a
+              >
+              <a
+                id="header-link"
+                data-page="distribution"
+                href="distribution.html"
+                class="text-zinc-500 hover:text-white h-full flex items-center transition duration-700"
+                >Дистрибуция</a
+              >
+              <a
+                id="header-link"
+                data-page="cooperation"
+                href="distribution.html"
+                class="text-zinc-500 hover:text-white h-full flex items-center transition duration-700"
+                >Сотрудничество</a
+              >
+              <a
+                id="header-link"
+                data-page="support"
+                href="support.html"
+                class="text-zinc-500 hover:text-white h-full flex items-center transition duration-700"
+                >Поддержка</a
+              >
+            </nav>
+          </div>
+          <button
+            class="px-2 h-full max-lg:px-0 max-lg:pl-4"
+            onclick="handleToggleSearch()"
+          >
+            <img src="assets/icons/search.svg" alt="search" />
+          </button>
+        </div>
+      </div>
+      <!-- Header Sutlinks -->
+      <div
+        id="header-sublinks"
+        class="fixed top-[75px] left-0 w-full h-[300px] opacity-0 pointer-events-none transition duration-700 max-md:hidden"
+      >
+        <div class="main-container h-full">
+          <div
+            id="header-sublinks-block"
+            class="h-full flex flex-col gap-y-[20px] items-center justify-center"
+          ></div>
+        </div>
+      </div>
+      <!-- Header Sutlinks -->
+      <!-- Header Search -->
+      <div
+        id="header-search"
+        class="fixed top-[75px] left-0 w-full h-[300px] opacity-0 pointer-events-none transition duration-700 max-md:h-full max-md:top-[55px]"
+      >
+        <div class="main-container h-full">
+          <div
+            class="h-full flex flex-col justify-center gap-y-10 max-md:justify-start max-md:pt-[30px]"
+          >
+            <div class="flex items-center gap-x-4">
+              <img
+                src="assets/icons/search.svg"
+                alt="search"
+                class="opacity-70"
+              />
+              <input
+                type="text"
+                placeholder="Найти свой SOAK"
+                class="text-white bg-transparent border-none outline-none ring-0 placeholder:text-zinc-500"
+              />
+            </div>
+            <div class="flex flex-col gap-y-6">
+              <h1 class="text-zinc-500 text-xs">Возgожно вы искали:</h1>
+              <div class="space-y-[10px]">
+                <a href="" class="text-white block text-xs"
+                  ><font class="text-zinc-500">→</font> SOAK X</a
+                >
+                <a href="" class="text-white block text-xs"
+                  ><font class="text-zinc-500">→</font> SOAK W</a
+                >
+                <a href="" class="text-white block text-xs"
+                  ><font class="text-zinc-500">→</font> SOAK L</a
+                >
+                <a href="" class="text-white block text-xs"
+                  ><font class="text-zinc-500">→</font> SOAK S</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Header Search -->
+      <!-- Header Menu -->
+      <div
+        id="header-menu"
+        class="fixed top-[55px] left-0 h-[calc(100%-55px)] w-full opacity-0 pointer-events-none transition duration-700 pt-[60px]"
+      >
+        <div class="main-container h-full">
+          <div class="flex flex-col h-full">
+            <div class="flex flex-col gap-y-[20px] items-center">
+              <a
+                href="index.html"
+                class="text-zinc-500 hover:text-white active:text-white transition duration-700 link-active"
+                >Главная</a
+              >
+              <a
+                href="product.html"
+                class="text-zinc-500 hover:text-white active:text-white transition duration-700"
+                >Продукция</a
+              >
+              <a
+                href="distribution.html"
+                class="text-zinc-500 hover:text-white active:text-white transition duration-700"
+                >Дистрибуция</a
+              >
+              <a
+                href="distribution.html"
+                class="text-zinc-500 hover:text-white active:text-white transition duration-700"
+                >Сотрудничество</a
+              >
+              <a
+                href="support.html"
+                class="text-zinc-500 hover:text-white active:text-white transition duration-700"
+                >Поддержка</a
+              >
+            </div>
+            <div
+              class="flex flex-col flex-1 items-center justify-end gap-y-[25px] pb-[40px]"
+            >
+              <div
+                class="flex items-center gap-x-[30px] justify-end max-sm:justify-center"
+              >
+                <a
+                  href=""
+                  class="block hover:-translate-y-2 transition duration-500"
+                >
+                  <img
+                    src="assets/icons/18+.svg"
+                    alt="18+"
+                    width="37px"
+                    height="37px"
+                  />
+                </a>
+                <a
+                  href=""
+                  class="block hover:-translate-y-2 transition duration-500"
+                >
+                  <img
+                    src="assets/icons/telegram.svg"
+                    alt="telegram"
+                    width="37px"
+                    height="37px"
+                  />
+                </a>
+                <a
+                  href=""
+                  class="block hover:-translate-y-2 transition duration-500"
+                >
+                  <img
+                    src="assets/icons/vkontakte.svg"
+                    alt="vkontakte"
+                    width="37px"
+                    height="37px"
+                  />
+                </a>
+                <a
+                  href=""
+                  class="block hover:-translate-y-2 transition duration-500"
+                >
+                  <img
+                    src="assets/icons/youtube.svg"
+                    alt="youtube"
+                    width="37px"
+                    height="37px"
+                  />
+                </a>
+              </div>
+              <div class="flex flex-col items-center gap-y-[15px]">
+                <a
+                  href=""
+                  class="text-zinc-500 text-right text-xs uppercase hover:text-white transition duration-700 whitespace-nowrap max-md:text-[10px] max-sm:text-center"
+                  >ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a
+                >
+                <p
+                  class="text-zinc-500 text-right text-xs max-md:text-[10px] max-sm:text-center"
+                >
+                  ©2024. ВСЕ ПРАВА ЗАЩИЩЕНЫ
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Header Menu -->
+    </header>
+    <!-- Header -->
+
+    <!-- Video Section -->
+    <section title="video" class="mx-auto">
+      <video id="video-section" autoplay muted loop></video>
+    </section>
+    <!-- Video Section -->
+
+    <main
+      id="main"
+      class="overflow-hidden py-20 space-y-20 max-sm:space-y-10 max-sm:py-20"
+    >
+      <!-- New Items Section -->
+      <section title="new-items">
+        <div class="main-container overflow-hidden">
+          <div class="space-y-14 max-sm:space-y-7">
+            <!-- Section Title -->
+            <div class="text-center space-y-3.5 max-sm:space-y-3">
+              <h1 class="text-white text-6xl max-md:text-5xl max-sm:text-2xl">
+                Новинки
+              </h1>
+              <p
+                class="text-zinc-500 tracking-[0.3px] max-md:text-sm max-sm:text-xs"
+              >
+                Подборка новинок для тебя
+              </p>
+            </div>
+            <!-- Section Title -->
+
+            <div>
+              <div class="swiper-new-items">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide w-full">
+                    <!-- Item -->
+                    <div
+                      class="grid grid-cols-[1fr_460px] gap-x-10 max-lg:block"
+                    >
+                      <div
+                        class="relative overflow-hidden h-[460px] col-span-1 rounded-[40px] max-sm:rounded-[20px] max-lg:hidden"
+                      >
+                        <div
+                          class="absolute h-full w-[160%] flex items-center justify-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-[1100px]:scale-125"
+                        >
+                          <video
+                            src="assets/video/home/soak-r.mp4"
+                            autoplay
+                            loop
+                            muted
+                          ></video>
+                        </div>
+                      </div>
+                      <div class="relative group">
+                        <a
+                          href="pages/product.html"
+                          class="mx-auto relative bg-black w-[460px] flex justify-center items-start p-7 h-[460px] rounded-[40px] max-lg:w-[300px] max-lg:h-[300px] max-lg:rounded-[20px] max-lg:p-5"
+                        >
+                          <div
+                            class="absolute h-full w-full top-0 left-0 overflow-hidden rounded-[40px] max-lg:rounded-[20px]"
+                          >
+                            <span
+                              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/2 h-1/2 bg-white blur-[100px] opacity-0 group-hover:opacity-70 transition duration-700"
+                            ></span>
+                          </div>
+                          <img
+                            src="assets/img/products/models/r.png"
+                            alt="r"
+                            class="h-[30px] opacity-80 transition duration-700-opacity duration-700 group-hover:opacity-100 max-sm:h-[20px]"
+                          />
+                          <img
+                            src="assets/img/r-new-1.png"
+                            alt="r"
+                            class="absolute top-7 right-7 z-[1] max-lg:w-[150px] transition duration-700-all group-hover:scale-125 group-hover:rotate-6 duration-700 max-lg:right-5 max-sm:scale-110 max-sm:top-10"
+                          />
+                          <img
+                            src="assets/img/r-new-2.png"
+                            alt="r"
+                            class="absolute top-7 left-7 transition duration-700-all group-hover:scale-125 group-hover:-rotate-6 duration-700 max-lg:w-[150px] max-lg:left-5 max-sm:top-11"
+                          />
+                        </a>
+                        <span
+                          class="absolute w-[calc(100%+4px)] h-[calc(100%+4px)] -top-0.5 -left-0.5 bg-gradient-to-b from-zinc-800 to-zinc-950 -z-[1] rounded-[40px] max-sm:rounded-[20px] opacity-0 group-hover:opacity-100 transition duration-700"
+                        ></span>
+                      </div>
+                    </div>
+                    <!-- Item -->
+                  </div>
+                  <div class="swiper-slide w-full">
+                    <!-- Item -->
+                    <div
+                      class="grid grid-cols-[1fr_460px] gap-x-10 max-lg:block"
+                    >
+                      <div
+                        class="relative overflow-hidden h-[460px] col-span-1 rounded-[40px] max-sm:rounded-[20px] max-lg:hidden"
+                      >
+                        <div
+                          class="absolute h-full w-[160%] flex items-center justify-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-[1100px]:scale-125"
+                        >
+                          <video
+                            src="assets/video/home/soak-l.mp4"
+                            autoplay
+                            loop
+                            muted
+                          ></video>
+                        </div>
+                      </div>
+                      <div class="relative group">
+                        <a
+                          href="pages/product.html"
+                          class="mx-auto relative bg-black w-[460px] flex justify-center items-start p-7 h-[460px] rounded-[40px] max-lg:w-[300px] max-lg:h-[300px] max-lg:rounded-[20px] max-lg:p-5"
+                        >
+                          <div
+                            class="absolute h-full w-full top-0 left-0 overflow-hidden rounded-[40px] max-lg:rounded-[20px]"
+                          >
+                            <span
+                              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/2 h-1/2 bg-white blur-[100px] opacity-0 group-hover:opacity-70 transition duration-700"
+                            ></span>
+                          </div>
+                          <img
+                            src="assets/img/products/models/l.png"
+                            alt="r"
+                            class="h-[30px] opacity-80 transition duration-700-opacity duration-700 group-hover:opacity-100 max-sm:h-[20px]"
+                          />
+                          <img
+                            src="assets/img/l-new-1.png"
+                            alt="r"
+                            class="absolute top-7 right-7 z-[1] max-lg:w-[150px] transition duration-700-all group-hover:scale-125 group-hover:rotate-6 duration-700 max-lg:right-5"
+                          />
+                          <img
+                            src="assets/img/l-new-2.png"
+                            alt="r"
+                            class="absolute top-7 left-7 transition duration-700-all group-hover:scale-125 group-hover:-rotate-6 duration-700 max-lg:w-[150px] max-lg:left-5"
+                          />
+                        </a>
+                        <span
+                          class="absolute w-[calc(100%+4px)] h-[calc(100%+4px)] -top-0.5 -left-0.5 bg-gradient-to-b from-zinc-800 to-zinc-950 -z-[1] rounded-[40px] max-sm:rounded-[20px] opacity-0 group-hover:opacity-100 transition duration-700"
+                        ></span>
+                      </div>
+                    </div>
+                    <!-- Item -->
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- New Items Section -->
+
+      <!-- Products Section -->
+      <section title="products" class="w-full">
+        <div class="main-container">
+          <div class="space-y-14 max-sm:space-y-7">
+            <!-- Section Title -->
+            <div class="text-center space-y-3.5 max-sm:space-y-3">
+              <h1 class="text-white text-6xl max-md:text-5xl max-sm:text-2xl">
+                Продукция
+              </h1>
+              <p
+                class="text-zinc-500 tracking-[0.3px] max-md:text-sm max-sm:text-xs"
+              >
+                Выбери то что по душе
+              </p>
+            </div>
+            <!-- Section Title -->
+
+            <!-- Section Content -->
+            <div
+              class="grid grid-cols-repeat justify-center gap-10 max-sm:grid-cols-2 max-sm:gap-5"
+            >
+              <!-- Product Item -->
+              <div
+                class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:scale-105"
+              >
+                <a
+                  href="product.html"
+                  class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:py-4 max-sm:px-6 max-sm:rounded-[20px]"
+                >
+                  <div class="relative">
+                    <span
+                      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-1/2 bg-white blur-[100px] opacity-0 group-hover:opacity-100 transition duration-700"
+                    ></span>
+                    <img
+                      src="assets/img/products/soak-l.png"
+                      alt="soak-l"
+                      class="group-hover:rotate-6 transition duration-700 relative z-[1]"
+                    />
+                  </div>
+                  <span class="flex justify-center">
+                    <img
+                      src="assets/img/products/models/l.png"
+                      alt="l"
+                      class="h-5 w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
+                    />
+                  </span>
+                </a>
+                <span
+                  class="absolute w-[calc(100%+4px)] h-[calc(100%+4px)] -top-0.5 -left-0.5 bg-gradient-to-b from-zinc-800 to-zinc-950 -z-[1] rounded-[40px] max-sm:rounded-[20px] opacity-0 group-hover:opacity-100 transition duration-700"
+                ></span>
+              </div>
+              <!-- Product Item -->
+
+              <!-- Product Item -->
+              <div
+                class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:scale-105"
+              >
+                <a
+                  href="product.html"
+                  class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:py-4 max-sm:px-6 max-sm:rounded-[20px]"
+                >
+                  <div class="relative">
+                    <span
+                      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-1/2 bg-white blur-[100px] opacity-0 group-hover:opacity-100 transition duration-700"
+                    ></span>
+                    <img
+                      src="assets/img/products/soak-m.png"
+                      alt="soak-m"
+                      class="group-hover:rotate-6 transition duration-700 relative z-[1]"
+                    />
+                  </div>
+                  <span class="flex justify-center">
+                    <img
+                      src="assets/img/products/models/m.png"
+                      alt="m"
+                      class="h-5 w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
+                    />
+                  </span>
+                </a>
+                <span
+                  class="absolute w-[calc(100%+4px)] h-[calc(100%+4px)] -top-0.5 -left-0.5 bg-gradient-to-b from-zinc-800 to-zinc-950 -z-[1] rounded-[40px] max-sm:rounded-[20px] opacity-0 group-hover:opacity-100 transition duration-700"
+                ></span>
+              </div>
+              <!-- Product Item -->
+
+              <!-- Product Item -->
+              <div
+                class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:scale-105"
+              >
+                <a
+                  href="product.html"
+                  class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:py-4 max-sm:px-6 max-sm:rounded-[20px]"
+                >
+                  <div class="relative">
+                    <span
+                      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-1/2 bg-white blur-[100px] opacity-0 group-hover:opacity-100 transition duration-700"
+                    ></span>
+                    <img
+                      src="assets/img/products/soak-q.png"
+                      alt="soak-q"
+                      class="group-hover:rotate-6 transition duration-700 relative z-[1]"
+                    />
+                  </div>
+                  <span class="flex justify-center">
+                    <img
+                      src="assets/img/products/models/q.png"
+                      alt="q"
+                      class="h-5 w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
+                    />
+                  </span>
+                </a>
+                <span
+                  class="absolute w-[calc(100%+4px)] h-[calc(100%+4px)] -top-0.5 -left-0.5 bg-gradient-to-b from-zinc-800 to-zinc-950 -z-[1] rounded-[40px] max-sm:rounded-[20px] opacity-0 group-hover:opacity-100 transition duration-700"
+                ></span>
+              </div>
+              <!-- Product Item -->
+
+              <!-- Product Item -->
+              <div
+                class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:scale-105"
+              >
+                <a
+                  href="product.html"
+                  class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:py-4 max-sm:px-6 max-sm:rounded-[20px]"
+                >
+                  <div class="relative">
+                    <span
+                      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-1/2 bg-white blur-[100px] opacity-0 group-hover:opacity-100 transition duration-700"
+                    ></span>
+                    <img
+                      src="assets/img/products/soak-r.png"
+                      alt="soak-r"
+                      class="group-hover:rotate-6 transition duration-700 relative z-[1]"
+                    />
+                  </div>
+                  <span class="flex justify-center">
+                    <img
+                      src="assets/img/products/models/r.png"
+                      alt="r"
+                      class="h-5 w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
+                    />
+                  </span>
+                </a>
+                <span
+                  class="absolute w-[calc(100%+4px)] h-[calc(100%+4px)] -top-0.5 -left-0.5 bg-gradient-to-b from-zinc-800 to-zinc-950 -z-[1] rounded-[40px] max-sm:rounded-[20px] opacity-0 group-hover:opacity-100 transition duration-700"
+                ></span>
+              </div>
+              <!-- Product Item -->
+
+              <!-- Product Item -->
+              <div
+                class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:scale-105"
+              >
+                <a
+                  href="product.html"
+                  class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:py-4 max-sm:px-6 max-sm:rounded-[20px]"
+                >
+                  <div class="relative">
+                    <span
+                      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-1/2 bg-white blur-[100px] opacity-0 group-hover:opacity-100 transition duration-700"
+                    ></span>
+                    <img
+                      src="assets/img/products/soak-s.png"
+                      alt="soak-s"
+                      class="group-hover:rotate-6 transition duration-700 relative z-[1]"
+                    />
+                  </div>
+                  <span class="flex justify-center">
+                    <img
+                      src="assets/img/products/models/s.png"
+                      alt="s"
+                      class="h-5 w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
+                    />
+                  </span>
+                </a>
+                <span
+                  class="absolute w-[calc(100%+4px)] h-[calc(100%+4px)] -top-0.5 -left-0.5 bg-gradient-to-b from-zinc-800 to-zinc-950 -z-[1] rounded-[40px] max-sm:rounded-[20px] opacity-0 group-hover:opacity-100 transition duration-700"
+                ></span>
+              </div>
+              <!-- Product Item -->
+
+              <!-- Product Item -->
+              <div
+                class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:scale-105"
+              >
+                <a
+                  href="product.html"
+                  class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:py-4 max-sm:px-6 max-sm:rounded-[20px]"
+                >
+                  <div class="relative">
+                    <span
+                      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-1/2 bg-white blur-[100px] opacity-0 group-hover:opacity-100 transition duration-700"
+                    ></span>
+                    <img
+                      src="assets/img/products/soak-t.png"
+                      alt="soak-t"
+                      class="group-hover:rotate-6 transition duration-700 relative z-[1]"
+                    />
+                  </div>
+                  <span class="flex justify-center">
+                    <img
+                      src="assets/img/products/models/t.png"
+                      alt="t"
+                      class="h-5 w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
+                    />
+                  </span>
+                </a>
+                <span
+                  class="absolute w-[calc(100%+4px)] h-[calc(100%+4px)] -top-0.5 -left-0.5 bg-gradient-to-b from-zinc-800 to-zinc-950 -z-[1] rounded-[40px] max-sm:rounded-[20px] opacity-0 group-hover:opacity-100 transition duration-700"
+                ></span>
+              </div>
+              <!-- Product Item -->
+
+              <!-- Product Item -->
+              <div
+                class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:scale-105"
+              >
+                <a
+                  href="product.html"
+                  class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:py-4 max-sm:px-6 max-sm:rounded-[20px]"
+                >
+                  <div class="relative">
+                    <span
+                      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-1/2 bg-white blur-[100px] opacity-0 group-hover:opacity-100 transition duration-700"
+                    ></span>
+                    <img
+                      src="assets/img/products/soak-w.png"
+                      alt="soak-w"
+                      class="group-hover:rotate-6 transition duration-700 relative z-[1]"
+                    />
+                  </div>
+                  <span class="flex justify-center">
+                    <img
+                      src="assets/img/products/models/w.png"
+                      alt="w"
+                      class="h-5 w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
+                    />
+                  </span>
+                </a>
+                <span
+                  class="absolute w-[calc(100%+4px)] h-[calc(100%+4px)] -top-0.5 -left-0.5 bg-gradient-to-b from-zinc-800 to-zinc-950 -z-[1] rounded-[40px] max-sm:rounded-[20px] opacity-0 group-hover:opacity-100 transition duration-700"
+                ></span>
+              </div>
+              <!-- Product Item -->
+
+              <!-- Product Item -->
+              <div
+                class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:scale-105"
+              >
+                <a
+                  href="product.html"
+                  class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:py-4 max-sm:px-6 max-sm:rounded-[20px]"
+                >
+                  <div class="relative">
+                    <span
+                      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-1/2 bg-white blur-[100px] opacity-0 group-hover:opacity-100 transition duration-700"
+                    ></span>
+                    <img
+                      src="assets/img/products/soak-x.png"
+                      alt="soak-x"
+                      class="group-hover:rotate-6 transition duration-700 relative z-[1]"
+                    />
+                  </div>
+                  <span class="flex justify-center">
+                    <img
+                      src="assets/img/products/models/x.png"
+                      alt="x"
+                      class="h-5 w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
+                    />
+                  </span>
+                </a>
+                <span
+                  class="absolute w-[calc(100%+4px)] h-[calc(100%+4px)] -top-0.5 -left-0.5 bg-gradient-to-b from-zinc-800 to-zinc-950 -z-[1] rounded-[40px] max-sm:rounded-[20px] opacity-0 group-hover:opacity-100 transition duration-700"
+                ></span>
+              </div>
+              <!-- Product Item -->
+
+              <!-- Product Item -->
+              <div
+                class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:scale-105"
+              >
+                <a
+                  href="product.html"
+                  class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:py-4 max-sm:px-6 max-sm:rounded-[20px]"
+                >
+                  <div class="relative">
+                    <span
+                      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-1/2 bg-white blur-[100px] opacity-0 group-hover:opacity-100 transition duration-700"
+                    ></span>
+                    <img
+                      src="assets/img/products/soak-x-zero.png"
+                      alt="soak-x-zero"
+                      class="group-hover:rotate-6 transition duration-700 relative z-[1]"
+                    />
+                  </div>
+                  <span class="flex justify-center">
+                    <img
+                      src="assets/img/products/models/x-zero.png"
+                      alt="x-zero"
+                      class="h-5 w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
+                    />
+                  </span>
+                </a>
+                <span
+                  class="absolute w-[calc(100%+4px)] h-[calc(100%+4px)] -top-0.5 -left-0.5 bg-gradient-to-b from-zinc-800 to-zinc-950 -z-[1] rounded-[40px] max-sm:rounded-[20px] opacity-0 group-hover:opacity-100 transition duration-700"
+                ></span>
+              </div>
+              <!-- Product Item -->
+
+              <!-- Product Item -->
+              <div
+                class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:scale-105"
+              >
+                <a
+                  href="product.html"
+                  class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:py-4 max-sm:px-6 max-sm:rounded-[20px]"
+                >
+                  <div class="relative">
+                    <span
+                      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-1/2 bg-white blur-[100px] opacity-0 group-hover:opacity-100 transition duration-700"
+                    ></span>
+                    <img
+                      src="assets/img/products/soak-cube.png"
+                      alt="soak-cube"
+                      class="group-hover:rotate-6 transition duration-700 relative z-[1]"
+                    />
+                  </div>
+                  <span class="flex justify-center">
+                    <img
+                      src="assets/img/products/models/cube.png"
+                      alt="cube"
+                      class="h-5 w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
+                    />
+                  </span>
+                </a>
+                <span
+                  class="absolute w-[calc(100%+4px)] h-[calc(100%+4px)] -top-0.5 -left-0.5 bg-gradient-to-b from-zinc-800 to-zinc-950 -z-[1] rounded-[40px] max-sm:rounded-[20px] opacity-0 group-hover:opacity-100 transition duration-700"
+                ></span>
+              </div>
+              <!-- Product Item -->
+
+              <!-- Product Item -->
+              <div
+                class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:scale-105"
+              >
+                <a
+                  href="product.html"
+                  class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:py-4 max-sm:px-6 max-sm:rounded-[20px]"
+                >
+                  <div class="relative">
+                    <span
+                      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-1/2 bg-white blur-[100px] opacity-0 group-hover:opacity-100 transition duration-700"
+                    ></span>
+                    <img
+                      src="assets/img/products/soak-line-9.png"
+                      alt="soak-line-9"
+                      class="group-hover:rotate-6 transition duration-700 relative z-[1]"
+                    />
+                  </div>
+                  <span class="flex justify-center">
+                    <img
+                      src="assets/img/products/models/line-9.png"
+                      alt="line-9"
+                      class="h-5 w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
+                    />
+                  </span>
+                </a>
+                <span
+                  class="absolute w-[calc(100%+4px)] h-[calc(100%+4px)] -top-0.5 -left-0.5 bg-gradient-to-b from-zinc-800 to-zinc-950 -z-[1] rounded-[40px] max-sm:rounded-[20px] opacity-0 group-hover:opacity-100 transition duration-700"
+                ></span>
+              </div>
+              <!-- Product Item -->
+
+              <!-- Coming Soon -->
+              <div
+                class="py-7 h-full flex flex-col bg-black text-center overflow-hidden rounded-[40px] max-w-[260px] min-w-[140px] cursor-pointer max-sm:py-4 max-sm:rounded-[20px]"
+              >
+                <div class="relative flex-1 w-full">
+                  <video
+                    src="assets/video/home/comming-soon.mp4"
+                    loop
+                    muted
+                    autoplay
+                    class="absolute h-full left-1/2 -translate-x-1/2"
+                  ></video>
+                </div>
+                <p class="text-white/60 max-sm:text-[10px]">Coming soon</p>
+              </div>
+              <!-- Coming Soon -->
+            </div>
+          </div>
+          <!-- Section Content -->
+        </div>
+      </section>
+      <!-- Products Section -->
+
+      <!-- About Section -->
+      <section title="about" class="w-full">
+        <div class="main-container">
+          <div class="space-y-14 max-sm:space-y-7">
+            <!-- Section Title -->
+            <div class="text-center space-y-3.5 max-sm:space-y-3">
+              <h1 class="text-white text-6xl max-md:text-5xl max-sm:text-2xl">
+                Мы компания будущего
+              </h1>
+              <p
+                class="text-zinc-500 tracking-[0.3px] max-md:text-sm max-sm:text-xs"
+              >
+                SOAK - это один из ведущих производителей качественных ЭСДН,
+                <br />
+                POD-систем и никотиносодержащих жидкостей
+              </p>
+            </div>
+            <!-- Section Title -->
+
+            <div
+              class="grid grid-rows-[450px,450px] grid-cols-2 gap-10 max-lg:flex max-lg:flex-col max-sm:gap-5"
+            >
+              <!-- Block -->
+              <div
+                class="relative group col-span-2 overflow-hidden rounded-[40px] p-10 flex items-end max-md:h-[350px] max-sm:text-2xl max-sm:h-[256px] max-sm:p-2 max-sm:rounded-[20px]"
+              >
+                <div
+                  class="absolute w-full -z-[1] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-[460px]:w-[460px]"
+                >
+                  <video
+                    src="assets/video/home/about-1.mp4"
+                    autoplay
+                    muted
+                    loop
+                  ></video>
+                </div>
+                <div
+                  class="max-w-[935px] space-y-7 z-[2] translate-y-[calc(100%-100px)] group-hover:translate-y-0 transition duration-700 max-lg:translate-y-[calc(100%-60px)] max-md:space-y-4"
+                >
+                  <h1
+                    class="text-white text-6xl max-lg:text-4xl max-sm:text-2xl"
+                  >
+                    Маркетинговые <br />
+                    мероприятия
+                  </h1>
+                  <p class="text-zinc-500 max-sm:text-xs">
+                    <font class="text-white">
+                      Наша команда постоянно работает над развитием узнаваемости
+                      бренда. </font
+                    >На 2023 год мы приняли участие в 5 российских профильных
+                    выставках – JohnCalliano, Hookah Club Show, Vape Club Show 2
+                    зарубежных профильных выставки – World Vape Show Dubai 2022
+                    и Egypt Vape Expo 2023, а также крупнейшей продуктовой
+                    выставке – ПРОДЭКСПО 2023
+                  </p>
+                </div>
+                <span
+                  class="absolute top-0 left-0 w-full h-full bg-black/80 backdrop-blur-[10px] z-[1] opacity-0 group-hover:opacity-100 transition duration-700"
+                ></span>
+              </div>
+              <!-- Block -->
+
+              <!-- Block -->
+              <div
+                class="relative overflow-hidden group col-span-1 rounded-[40px] p-10 flex items-end max-md:h-[350px] max-sm:h-[256px] max-sm:p-2 max-sm:rounded-[20px]"
+              >
+                <div
+                  class="absolute h-full w-[160%] -z-[1] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                >
+                  <video
+                    src="assets/video/home/about-2.mp4"
+                    autoplay
+                    muted
+                    loop
+                  ></video>
+                </div>
+                <div
+                  class="max-w-[935px] space-y-7 z-[2] translate-y-[calc(100%-100px)] group-hover:translate-y-0 transition duration-700 max-lg:translate-y-[calc(100%-60px)] max-md:space-y-4"
+                >
+                  <h1
+                    class="text-white text-6xl max-lg:text-4xl max-sm:text-2xl"
+                  >
+                    Наша <br />
+                    миссия
+                  </h1>
+                  <p class="text-zinc-500 max-sm:text-xs">
+                    <font class="text-white">
+                      Наша команда постоянно работает над развитием узнаваемости
+                      бренда. </font
+                    >На 2023 год мы приняли участие в 5 российских профильных
+                    выставках – JohnCalliano, Hookah Club Show, Vape Club Show 2
+                    зарубежных профильных выставки – World Vape Show Dubai 2022
+                    и Egypt Vape Expo 2023, а также крупнейшей продуктовой
+                    выставке – ПРОДЭКСПО 2023
+                  </p>
+                </div>
+                <span
+                  class="absolute top-0 left-0 w-full h-full bg-black/80 backdrop-blur-[10px] z-[1] opacity-0 group-hover:opacity-100 transition duration-700"
+                ></span>
+              </div>
+              <!-- Block -->
+
+              <!-- Block -->
+              <div
+                class="relative group overflow-hidden col-span-1 rounded-[40px] p-10 flex items-end max-md:h-[350px] max-sm:h-[256px] max-sm:p-2 max-sm:rounded-[20px]"
+              >
+                <div
+                  class="absolute h-full w-[160%] -z-[1] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                >
+                  <video
+                    src="assets/video/home/about-3.mp4"
+                    autoplay
+                    muted
+                    loop
+                  ></video>
+                </div>
+                <div
+                  class="max-w-[935px] space-y-7 z-[2] translate-y-[calc(100%-100px)] group-hover:translate-y-0 transition duration-700 max-lg:translate-y-[calc(100%-60px)] max-md:space-y-4"
+                >
+                  <h1
+                    class="text-white text-6xl max-lg:text-4xl max-sm:text-2xl"
+                  >
+                    Гарантия <br />
+                    Качества
+                  </h1>
+                  <p class="text-zinc-500 max-sm:text-xs">
+                    <font class="text-white">
+                      Наша команда постоянно работает над развитием узнаваемости
+                      бренда. </font
+                    >На 2023 год мы приняли участие в 5 российских профильных
+                    выставках – JohnCalliano, Hookah Club Show, Vape Club Show 2
+                    зарубежных профильных выставки – World Vape Show Dubai 2022
+                    и Egypt Vape Expo 2023, а также крупнейшей продуктовой
+                    выставке – ПРОДЭКСПО 2023
+                  </p>
+                </div>
+                <span
+                  class="absolute top-0 left-0 w-full h-full bg-black/80 backdrop-blur-[10px] z-[1] opacity-0 group-hover:opacity-100 transition duration-700"
+                ></span>
+              </div>
+              <!-- Block -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About Section -->
+
+      <!-- Ticket Section -->
+      <section title="ticket" class="overflow-hidden">
+        <div
+          class="flex gap-x-7 animate-ticket w-fit bg-black py-3 max-md:text-sm max-sm:text-xs"
+        >
+          <div class="flex items-center gap-x-7 text-white whitespace-nowrap">
+            <p>Simply One of A Kind</p>
+            <p>Simply One of A Kind</p>
+            <p>Simply One of A Kind</p>
+            <p>Simply One of A Kind</p>
+            <p>Simply One of A Kind</p>
+            <p>Simply One of A Kind</p>
+            <p>Simply One of A Kind</p>
+            <p>Simply One of A Kind</p>
+            <p>Simply One of A Kind</p>
+            <p>Simply One of A Kind</p>
+            <p>Simply One of A Kind</p>
+          </div>
+          <div class="flex items-center gap-x-7 text-white whitespace-nowrap">
+            <p>Simply One of A Kind</p>
+            <p>Simply One of A Kind</p>
+            <p>Simply One of A Kind</p>
+            <p>Simply One of A Kind</p>
+            <p>Simply One of A Kind</p>
+            <p>Simply One of A Kind</p>
+            <p>Simply One of A Kind</p>
+            <p>Simply One of A Kind</p>
+            <p>Simply One of A Kind</p>
+            <p>Simply One of A Kind</p>
+            <p>Simply One of A Kind</p>
+          </div>
+        </div>
+      </section>
+      <!-- Ticket Section -->
+
+      <!-- Merch Section -->
+      <section title="merch">
+        <div class="main-container">
+          <div
+            class="relative h-[258px] overflow-hidden rounded-[40px] flex items-center justify-center max-sm:rounded-[20px] max-sm:h-[192px]"
+          >
+            <span
+              class="absolute w-full h-full bg-black/10 backdrop-blur-[15px] max-sm:backdrop-blur-sm"
+            ></span>
+            <div
+              class="absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2 w-full -z-[1]"
+            >
+              <video
+                src="assets/video/home/merch.mp4"
+                autoplay
+                loop
+                muted
+              ></video>
+            </div>
+            <div class="z-[1] space-y-7 text-center max-sm:space-y-4">
+              <h1 class="text-white text-6xl max-sm:text-2xl">Стиль SOAK</h1>
+              <p
+                class="text-zinc-500 text-center max-sm:text-xs max-sm:max-w-[250px]"
+              >
+                Смотри подробнее в нашем Telegram канале
+              </p>
+              <button class="btn-telegram mx-auto">
+                <svg
+                  width="50.000000"
+                  height="24.000000"
+                  viewBox="0 0 30 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <path
+                    id="Иконка"
+                    d="M1.62 9.77C9.63 6.28 14.98 3.98 17.65 2.87C25.29 -0.31 26.88 -0.86 27.91 -0.88C28.14 -0.88 28.65 -0.83 28.98 -0.56C29.26 -0.33 29.33 -0.03 29.37 0.18C29.4 0.4 29.45 0.89 29.41 1.27C29 5.62 27.21 16.17 26.3 21.04C25.91 23.1 25.15 23.79 24.42 23.86C22.82 24 21.61 22.8 20.06 21.79C17.64 20.2 16.28 19.21 13.93 17.67C11.21 15.88 12.97 14.89 14.52 13.29C14.92 12.87 21.96 6.47 22.1 5.89C22.11 5.81 22.13 5.54 21.97 5.4C21.81 5.26 21.57 5.3 21.4 5.34C21.16 5.4 17.29 7.95 9.8 13.01C8.7 13.76 7.71 14.13 6.82 14.11C5.83 14.09 3.95 13.56 2.54 13.1C0.82 12.54 -0.55 12.24 -0.43 11.29C-0.37 10.8 0.31 10.29 1.62 9.77Z"
+                    fill="currentColor"
+                    fill-opacity="1.000000"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+                <span>Перейти в Telegram</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Merch Section -->
+
+      <!-- News Section -->
+      <section title="news">
+        <div class="main-container">
+          <div class="space-y-14 max-sm:space-y-7">
+            <!-- Section Title -->
+            <div class="text-center space-y-3.5 max-sm:space-y-3">
+              <h1 class="text-white text-6xl max-md:text-5xl max-sm:text-2xl">
+                Новости
+              </h1>
+              <p
+                class="text-zinc-500 tracking-[0.3px] max-md:text-sm max-sm:text-xs"
+              >
+                Все события компании
+              </p>
+            </div>
+            <!-- Section Title -->
+
+            <div>
+              <div class="swiper-news">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <!-- News Item -->
+                    <div
+                      class="mx-auto space-y-10 w-[360px] max-sm:w-[220px] max-sm:space-y-4"
+                    >
+                      <a
+                        href=""
+                        class="relative block group overflow-hidden w-[360px] h-[360px] rounded-[40px] max-sm:w-[220px] max-sm:h-[220px] max-sm:rounded-[20px]"
+                      >
+                        <img
+                          src="assets/img/news-1.png"
+                          alt="news"
+                          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full transition duration-700 group-hover:opacity-60"
+                        />
+                        <span
+                          class="absolute py-5 px-16 bg-black/60 rounded-t-[20px] backdrop-blur-lg text-white text-xs -bottom-full left-1/2 transition-all duration-500 -translate-x-1/2 max-sm:rounded-t-lg max-sm:px-7 max-sm:py-3 group-hover:bottom-0 max-md:bottom-0"
+                        >
+                          Подробнее
+                        </span>
+                      </a>
+                      <p class="text-white text-center max-sm:text-xs">
+                        Лови вторую часть гороскопа электронок на 2024 год!
+                      </p>
+                    </div>
+                    <!-- News Item -->
+                  </div>
+                  <div class="swiper-slide">
+                    <!-- News Item -->
+                    <div
+                      class="mx-auto space-y-10 w-[360px] max-sm:w-[220px] max-sm:space-y-4"
+                    >
+                      <a
+                        href=""
+                        class="relative block group overflow-hidden w-[360px] h-[360px] rounded-[40px] max-sm:w-[220px] max-sm:h-[220px] max-sm:rounded-[20px]"
+                      >
+                        <img
+                          src="assets/img/news-2.png"
+                          alt="news"
+                          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full transition duration-700 group-hover:opacity-60"
+                        />
+                        <span
+                          class="absolute py-5 px-16 bg-black/60 rounded-t-[20px] backdrop-blur-lg text-white text-xs -bottom-full left-1/2 transition-all duration-500 -translate-x-1/2 max-sm:rounded-t-lg max-sm:px-7 max-sm:py-3 group-hover:bottom-0 max-md:bottom-0"
+                        >
+                          Подробнее
+                        </span>
+                      </a>
+                      <p class="text-white text-center max-sm:text-xs">
+                        Наш язык любви - это однозначно подарки
+                      </p>
+                    </div>
+                    <!-- News Item -->
+                  </div>
+                  <div class="swiper-slide">
+                    <!-- News Item -->
+                    <div
+                      class="mx-auto space-y-10 w-[360px] max-sm:w-[220px] max-sm:space-y-4"
+                    >
+                      <a
+                        href=""
+                        class="relative block group overflow-hidden w-[360px] h-[360px] rounded-[40px] max-sm:w-[220px] max-sm:h-[220px] max-sm:rounded-[20px]"
+                      >
+                        <img
+                          src="assets/img/news-3.png"
+                          alt="news"
+                          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full transition duration-700 group-hover:opacity-60"
+                        />
+                        <span
+                          class="absolute py-5 px-16 bg-black/60 rounded-t-[20px] backdrop-blur-lg text-white text-xs -bottom-full left-1/2 transition-all duration-500 -translate-x-1/2 max-sm:rounded-t-lg max-sm:px-7 max-sm:py-3 group-hover:bottom-0 max-md:bottom-0"
+                        >
+                          Подробнее
+                        </span>
+                      </a>
+                      <p class="text-white text-center max-sm:text-xs">
+                        Продолжаем серию ножиданных коллабораций...
+                      </p>
+                    </div>
+                    <!-- News Item -->
+                  </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- News Section -->
+
+      <!-- Сooperation Section -->
+      <section title="cooperation">
+        <div class="main-container">
+          <div class="relative bg-black rounded-[40px] max-sm:rounded-[20px]">
+            <div
+              class="absolute top-0 left-0 size-full opacity-15 overflow-hidden rounded-[40px] max-sm:rounded-[20px]"
+            >
+              <video
+                src="assets/video/fon-1.mp4"
+                loop
+                muted
+                autoplay
+                class="blur-[10px] scale-[3]"
+              ></video>
+            </div>
+            <div class="z-[1] relative py-10 px-[60px] max-sm:py-5 max-sm:px-4">
+              <img
+                src="assets/img/cooperation-1.png"
+                alt="cooperation"
+                class="absolute -top-[150px] -left-[120px] max-sm:top-auto max-sm:left-auto max-sm:-bottom-[40px] max-sm:-right-[80px] max-sm:h-[190px] max-sm:w-[177px] max-sm:-rotate-[20deg]"
+              />
+              <img
+                src="assets/img/cooperation-2.png"
+                alt="cooperation"
+                class="absolute -bottom-[100px] -right-[120px] pointer-events-none max-sm:hidden"
+              />
+              <form
+                id="confirmation-form"
+                class="space-y-[50px] max-sm:space-y-7"
+              >
+                <h1
+                  class="text-center text-white text-6xl max-lg:text-4xl max-sm:text-2xl"
+                >
+                  Сотрудничество
+                </h1>
+                <div
+                  class="grid grid-cols-repeat_cooperation justify-center gap-x-10 gap-y-7 items-center max-sm:gap-y-7"
+                >
+                  <input
+                    id="name"
+                    type="text"
+                    placeholder="Имя*"
+                    class="input"
+                  />
+                  <input
+                    id="phone-number"
+                    type="text"
+                    placeholder="Телефон*"
+                    class="input"
+                  />
+                  <input
+                    id="comment"
+                    type="text"
+                    placeholder="Комментарий"
+                    class="input"
+                  />
+                  <input
+                    id="city"
+                    type="text"
+                    placeholder="Город*"
+                    class="input max-[880px]:row-start-2"
+                  />
+                  <input
+                    type="text"
+                    id="telegram"
+                    placeholder="Telegram (если есть)"
+                    class="input max-[880px]:row-start-5"
+                  />
+                  <div class="flex gap-4">
+                    <div class="w-[20px] h-[20px]">
+                      <input
+                        id="is-confirm-policy"
+                        type="checkbox"
+                        class="checkbox"
+                      />
+                    </div>
+                    <p class="text-white text-xs">
+                      Я согласен с
+                      <a
+                        href=""
+                        class="text-zinc-500 hover:text-white transition duration-700"
+                      >
+                        политикой конфиденциальности
+                      </a>
+                    </p>
+                  </div>
+                  <input
+                    id="fo"
+                    type="text"
+                    placeholder="Выберите ФО*"
+                    class="input max-[880px]:row-start-3"
+                  />
+                  <input
+                    id="net-name"
+                    type="text"
+                    placeholder="Название сети (если есть)"
+                    class="input max-[880px]:row-start-6"
+                  />
+                  <button
+                    class="btn-m !py-1 !text-base !rounded-[10px] !w-[214px]"
+                  >
+                    Отправить заявку
+                  </button>
+                </div>
+              </form>
+              <div id="submited-form" class="hidden">
+                <div
+                  class="flex flex-col items-center justify-center h-full gap-y-7 max-sm:gap-y-5"
+                >
+                  <img
+                    src="assets/icons/logo-mobile.svg"
+                    alt="logo"
+                    class="w-[300px] max-sm:w-[190px]"
+                  />
+                  <h1
+                    class="text-white text-5xl text-center max-md:text-4xl max-sm:text-2xl"
+                  >
+                    Заявка успешно оправлена
+                  </h1>
+                  <p class="text-zinc-500 text-center max-sm:text-xs">
+                    в ближайшее время с Вами свяжутся нажи менеджеры
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Сooperation Section -->
+
+      <!-- Map Section -->
+      <section title="map">
+        <div class="main-container">
+          <div class="space-y-14 max-sm:space-y-7">
+            <!-- Section Title -->
+            <div class="text-center space-y-3.5 max-sm:space-y-3">
+              <h1 class="text-white text-6xl max-md:text-5xl max-sm:text-2xl">
+                Карта магазинов
+              </h1>
+              <p
+                class="text-zinc-500 mx-auto tracking-[0.3px] text-center max-md:text-sm max-sm:text-xs max-sm:max-w-[180px]"
+              >
+                Найдите свой SOAK среди 5897 магазинов
+              </p>
+            </div>
+            <!-- Section Title -->
+
+            <div class="space-y-10 max-sm:space-y-7">
+              <div
+                class="relative h-[440px] rounded-[40px] max-sm:rounded-[20px] max-sm:h-[400px] overflow-hidden"
+              >
+                <span
+                  style="background: url('assets/img/map.png')"
+                  class="absolute size-full bg-no-repeat bg-cover bg-center"
+                ></span>
+              </div>
+
+              <div class="text-center">
+                <a href="" class="text-white hover:underline max-sm:text-xs"
+                  >Добавь свой магазин</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Map Section -->
+
+      <!-- Popular Section -->
+      <section title="popular">
+        <div class="main-container">
+          <div class="space-y-14 max-sm:space-y-7">
+            <!-- Section Title -->
+            <div class="text-center space-y-3.5 max-sm:space-y-3">
+              <h1 class="text-white text-6xl max-md:text-5xl max-sm:text-2xl">
+                Популярные продукты
+              </h1>
+            </div>
+            <!-- Section Title -->
+
+            <div>
+              <div class="swiper-popular">
+                <div class="swiper-wrapper pt-3">
+                  <div class="swiper-slide">
+                    <!-- Product Item -->
+                    <div
+                      class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:scale-105"
+                    >
+                      <a
+                        href="product.html"
+                        class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:py-4 max-sm:px-6 max-sm:rounded-[20px]"
+                      >
+                        <div class="relative">
+                          <span
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-1/2 bg-white blur-[100px] opacity-0 group-hover:opacity-100 transition duration-700"
+                          ></span>
+                          <img
+                            src="assets/img/products/soak-l.png"
+                            alt="soak-l"
+                            class="group-hover:rotate-6 transition duration-700 relative z-[1]"
+                          />
+                        </div>
+                        <span class="flex justify-center">
+                          <img
+                            src="assets/img/products/models/l.png"
+                            alt="l"
+                            class="h-5 w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
+                          />
+                        </span>
+                      </a>
+                      <span
+                        class="absolute w-[calc(100%+4px)] h-[calc(100%+4px)] -top-0.5 -left-0.5 bg-gradient-to-b from-zinc-800 to-zinc-950 -z-[1] rounded-[40px] max-sm:rounded-[20px] opacity-0 group-hover:opacity-100 transition duration-700"
+                      ></span>
+                    </div>
+                    <!-- Product Item -->
+                  </div>
+                  <div class="swiper-slide">
+                    <!-- Product Item -->
+                    <div
+                      class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:scale-105"
+                    >
+                      <a
+                        href="product.html"
+                        class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:py-4 max-sm:px-6 max-sm:rounded-[20px]"
+                      >
+                        <div class="relative">
+                          <span
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-1/2 bg-white blur-[100px] opacity-0 group-hover:opacity-100 transition duration-700"
+                          ></span>
+                          <img
+                            src="assets/img/products/soak-m.png"
+                            alt="soak-m"
+                            class="group-hover:rotate-6 transition duration-700 relative z-[1]"
+                          />
+                        </div>
+                        <span class="flex justify-center">
+                          <img
+                            src="assets/img/products/models/m.png"
+                            alt="m"
+                            class="h-5 w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
+                          />
+                        </span>
+                      </a>
+                      <span
+                        class="absolute w-[calc(100%+4px)] h-[calc(100%+4px)] -top-0.5 -left-0.5 bg-gradient-to-b from-zinc-800 to-zinc-950 -z-[1] rounded-[40px] max-sm:rounded-[20px] opacity-0 group-hover:opacity-100 transition duration-700"
+                      ></span>
+                    </div>
+                    <!-- Product Item -->
+                  </div>
+                  <div class="swiper-slide">
+                    <!-- Product Item -->
+                    <div
+                      class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:scale-105"
+                    >
+                      <a
+                        href="product.html"
+                        class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:py-4 max-sm:px-6 max-sm:rounded-[20px]"
+                      >
+                        <div class="relative">
+                          <span
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-1/2 bg-white blur-[100px] opacity-0 group-hover:opacity-100 transition duration-700"
+                          ></span>
+                          <img
+                            src="assets/img/products/soak-q.png"
+                            alt="soak-q"
+                            class="group-hover:rotate-6 transition duration-700 relative z-[1]"
+                          />
+                        </div>
+                        <span class="flex justify-center">
+                          <img
+                            src="assets/img/products/models/q.png"
+                            alt="q"
+                            class="h-5 w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
+                          />
+                        </span>
+                      </a>
+                      <span
+                        class="absolute w-[calc(100%+4px)] h-[calc(100%+4px)] -top-0.5 -left-0.5 bg-gradient-to-b from-zinc-800 to-zinc-950 -z-[1] rounded-[40px] max-sm:rounded-[20px] opacity-0 group-hover:opacity-100 transition duration-700"
+                      ></span>
+                    </div>
+                    <!-- Product Item -->
+                  </div>
+                  <div class="swiper-slide">
+                    <!-- Product Item -->
+                    <div
+                      class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:scale-105"
+                    >
+                      <a
+                        href="product.html"
+                        class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:py-4 max-sm:px-6 max-sm:rounded-[20px]"
+                      >
+                        <div class="relative">
+                          <span
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-1/2 bg-white blur-[100px] opacity-0 group-hover:opacity-100 transition duration-700"
+                          ></span>
+                          <img
+                            src="assets/img/products/soak-r.png"
+                            alt="soak-r"
+                            class="group-hover:rotate-6 transition duration-700 relative z-[1]"
+                          />
+                        </div>
+                        <span class="flex justify-center">
+                          <img
+                            src="assets/img/products/models/r.png"
+                            alt="r"
+                            class="h-5 w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
+                          />
+                        </span>
+                      </a>
+                      <span
+                        class="absolute w-[calc(100%+4px)] h-[calc(100%+4px)] -top-0.5 -left-0.5 bg-gradient-to-b from-zinc-800 to-zinc-950 -z-[1] rounded-[40px] max-sm:rounded-[20px] opacity-0 group-hover:opacity-100 transition duration-700"
+                      ></span>
+                    </div>
+                    <!-- Product Item -->
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Popular Section -->
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="relative bg-black rounded-t-[100px] overflow-hidden max-sm:rounded-t-[40px]"
+    >
+      <span
+        class="absolute w-full h-full flex items-center justify-center scale-[2.5] opacity-15 blur-[10px] max-sm:scale-[6]"
+      >
+        <video src="assets/video/fon-1.mp4" loop muted autoplay></video>
+      </span>
+      <div
+        class="main-container space-y-[60px] relative z-[1] pt-[60px] pb-10 max-sm:space-y-10 max-sm:pt-[30px] max-sm:pb-[10px]"
+      >
+        <!-- Footer Top -->
+        <div
+          class="grid grid-cols-5 gap-y-7 max-[940px]:grid-cols-3 max-sm:block"
+        >
+          <div class="w-[190px] space-y-10 row-span-2 max-sm:mx-auto">
+            <img
+              src="assets/icons/logo.svg"
+              alt="logo"
+              class="w-[190px] mx-auto max-sm:w-[130px]"
+            />
+            <div class="block space-y-2 sm:hidden">
+              <a
+                href=""
+                class="block text-zinc-500 active:text-white transition duration-500 text-center"
+                >Главная</a
+              >
+              <a
+                href=""
+                class="block text-zinc-500 active:text-white transition duration-500 text-center"
+                >Продукция</a
+              >
+              <a
+                href=""
+                class="block text-zinc-500 active:text-white transition duration-500 text-center"
+                >Дистрибуция</a
+              >
+              <a
+                href=""
+                class="block text-zinc-500 active:text-white transition duration-500 text-center"
+                >Сотрудничество</a
+              >
+              <a
+                href=""
+                class="block text-zinc-500 active:text-white transition duration-500 text-center"
+                >Поддержка</a
+              >
+            </div>
+            <div class="space-y-5">
+              <button class="btn-m !py-2.5">
+                Задать <br />
+                свой вопрос
+              </button>
+              <button class="btn-m !py-2.5">
+                Оставить заявку <br />
+                через Телеграм-бот
+              </button>
+              <button class="btn-m !py-2.5">
+                Оставить заявку <br />
+                на веб-сайте
+              </button>
+            </div>
+          </div>
+          <div
+            class="space-y-10 mx-auto max-[940px]:m-0 max-md:text-sm max-md:space-y-5 max-md:pl-10 max-sm:hidden"
+          >
+            <h1 class="text-white">Главная</h1>
+            <div class="space-y-[14px]">
+              <a
+                href=""
+                class="block text-zinc-500 hover:text-white transition duration-500"
+                >Новинки</a
+              >
+              <a
+                href=""
+                class="block text-zinc-500 hover:text-white transition duration-500"
+                >Продукция</a
+              >
+              <a
+                href=""
+                class="block text-zinc-500 hover:text-white transition duration-500"
+                >О нас</a
+              >
+              <a
+                href=""
+                class="block text-zinc-500 hover:text-white transition duration-500"
+                >Новости</a
+              >
+              <a
+                href=""
+                class="block text-zinc-500 hover:text-white transition duration-500"
+                >Карта</a
+              >
+            </div>
+          </div>
+          <div
+            class="space-y-10 mx-auto max-[940px]:m-0 max-md:text-sm max-md:space-y-5 max-md:pl-10 max-sm:hidden"
+          >
+            <h1 class="text-white">Продукция</h1>
+            <div class="space-y-[14px]">
+              <a
+                href=""
+                class="block text-zinc-500 hover:text-white transition duration-500"
+                >SOAK L</a
+              >
+              <a
+                href=""
+                class="block text-zinc-500 hover:text-white transition duration-500"
+                >SOAK M</a
+              >
+              <a
+                href=""
+                class="block text-zinc-500 hover:text-white transition duration-500"
+                >SOAK Q</a
+              >
+              <a
+                href=""
+                class="block text-zinc-500 hover:text-white transition duration-500"
+                >SOAK R</a
+              >
+              <a
+                href=""
+                class="block text-zinc-500 hover:text-white transition duration-500"
+                >Смотреть все</a
+              >
+            </div>
+          </div>
+          <div
+            class="space-y-10 mx-auto max-[940px]:m-0 max-md:text-sm max-md:space-y-5 max-md:pl-10 max-sm:hidden"
+          >
+            <h1 class="text-white">Сотрудничество</h1>
+            <div class="space-y-[14px]">
+              <a
+                href=""
+                class="block text-zinc-500 hover:text-white transition duration-500"
+                >Награды</a
+              >
+              <a
+                href=""
+                class="block text-zinc-500 hover:text-white transition duration-500"
+                >О нас</a
+              >
+              <a
+                href=""
+                class="block text-zinc-500 hover:text-white transition duration-500"
+                >Оставить заявку</a
+              >
+            </div>
+          </div>
+          <div
+            class="space-y-10 mx-auto max-[940px]:m-0 max-md:text-sm max-md:space-y-5 max-md:pl-10 max-sm:hidden"
+          >
+            <h1 class="text-white">Поддержка</h1>
+            <div class="space-y-[14px]">
+              <a
+                href=""
+                class="block text-zinc-500 hover:text-white transition duration-500"
+                >Проверка <br />
+                устройства</a
+              >
+              <a
+                href=""
+                class="block text-zinc-500 hover:text-white transition duration-500"
+                >Бот заботы</a
+              >
+              <a
+                href=""
+                class="block text-zinc-500 hover:text-white transition duration-500"
+                >FAQ</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Footer Top -->
+
+        <!-- Footer Bottom -->
+        <div
+          class="flex justify-between items-center gap-x-7 max-sm:flex-col-reverse max-sm:gap-y-10"
+        >
+          <div class="space-y-5 max-sm:space-y-[15px]">
+            <h1 class="text-white uppercase">
+              ПРОДАЖА НЕСОВЕРШЕННОЛЕТНИМ ЗАПРЕЩЕНА
+            </h1>
+            <p class="text-xs text-zinc-500 max-w-[810px] max-md:text-[10px]">
+              Этот сайт содержит информацию о продуктах, предназначенных только
+              для лиц старше 18 лет, проживающих в РФ, которые в противном
+              случае продолжат курить или употреблять иную никотинсодержащую
+              продукцию. Продукты не являются альтернативой отказу от
+              употребления табачной или иной никотинсодержащей продукции и не
+              являются средством для лечения никотиновой зависимости, а также не
+              исключает риски
+            </p>
+          </div>
+          <div class="space-y-8 max-sm:space-y-10">
+            <div
+              class="flex items-center gap-x-[30px] justify-end max-sm:justify-center"
+            >
+              <a
+                href=""
+                class="block hover:-translate-y-2 transition duration-500"
+              >
+                <img
+                  src="assets/icons/18+.svg"
+                  alt="18+"
+                  width="37px"
+                  height="37px"
+                />
+              </a>
+              <a
+                href=""
+                class="block hover:-translate-y-2 transition duration-500"
+              >
+                <img
+                  src="assets/icons/telegram.svg"
+                  alt="telegram"
+                  width="37px"
+                  height="37px"
+                />
+              </a>
+              <a
+                href=""
+                class="block hover:-translate-y-2 transition duration-500"
+              >
+                <img
+                  src="assets/icons/vkontakte.svg"
+                  alt="vkontakte"
+                  width="37px"
+                  height="37px"
+                />
+              </a>
+              <a
+                href=""
+                class="block hover:-translate-y-2 transition duration-500"
+              >
+                <img
+                  src="assets/icons/youtube.svg"
+                  alt="youtube"
+                  width="37px"
+                  height="37px"
+                />
+              </a>
+            </div>
+            <div class="space-y-5 max-sm:space-y-[15px]">
+              <a
+                href=""
+                class="text-zinc-500 text-right text-xs uppercase hover:text-white transition duration-700 whitespace-nowrap max-md:text-[10px] max-sm:text-center"
+                >ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a
+              >
+              <p
+                class="text-zinc-500 text-right text-xs max-md:text-[10px] max-sm:text-center"
+              >
+                ©2024. ВСЕ ПРАВА ЗАЩИЩЕНЫ
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Footer Bottom -->
+      </div>
+    </footer>
+    <!-- Footer -->
+
+    <!------------------- These tags must be on all pages --------------------------->
+
+    <!-- Popups -->
+    <div>
+      <!-- Age Confirmation Popup -->
+      <div id="age-confirmation-popup" class="popup age-popup">
+        <div
+          class="popup-wrapper age-wrapper max-w-[600px] min-w-[300px] flex flex-col items-center gap-y-10 max-md:gap-y-[30px]"
+        >
+          <img src="assets/icons/18+.svg" alt="18+" />
+          <div class="space-y-[30px] text-center max-md:space-y-5">
+            <h1
+              class="text-[42px] text-white uppercase leading-[37px] max-lg:text-3xl max-md:text-2xl max-sm:text-base max-sm:leading-4"
+            >
+              мне есть 18 лет
+            </h1>
+            <p
+              class="text-zinc-500 text-center leading-[22px] max-md:text-sm max-sm:text-xs"
+            >
+              Я подтверждаю, что мне исполнилось 18 и более, я являюсь
+              потребителем табака или никотина и согласен с условиями
+              пользования
+            </p>
+          </div>
+          <div class="flex gap-7 max-md:flex-col max-md:gap-5">
+            <button class="btn-m uppercase" onclick="handleConfirmAge()">
+              Да подтверждаю
+            </button>
+            <button class="btn-m uppercase" onclick="handleCLoseWindow()">
+              Зайду позже
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Age Confirmation Popup -->
+    </div>
+
+    <!-- Popup-bg -->
+    <span id="age-confirmation-bg" class="blur-bg"></span>
+
+    <!-- Scroll Buttons -->
+    <div
+      class="fixed top-1/2 -translate-y-1/2 right-[60px] space-y-3 z-[4] max-md:hidden"
+    >
+      <button
+        onclick="handleScrollTop()"
+        class="size-[30px] border-2 border-zinc-500 bg-black/50 backdrop-blur-[20px] hover:scale-110 transition duration-700 rounded-lg flex items-center justify-center"
+      >
+        <img src="assets/icons/arrow-top.svg" alt="arrow-top" />
+      </button>
+      <button
+        onclick="handleScrollBottom()"
+        class="size-[30px] border-2 border-zinc-500 bg-black/50 backdrop-blur-[20px] hover:scale-110 transition duration-700 rounded-lg flex items-center justify-center"
+      >
+        <img src="assets/icons/arrow-bottom.svg" alt="arrow-bottom" />
+      </button>
+    </div>
+
+    <!-- Loading Screen -->
+    <div
+      id="loading-screen"
+      class="fixed bg-zinc-950 w-full h-full z-20 top-0 left-0 flex items-center justify-center transition duration-700"
+    >
+      <span class="relative z-30">
+        <img
+          src="assets/img/loading-ellipse.png"
+          alt="loading"
+          class="loading"
+        />
+        <img
+          src="assets/icons/logo-mobile.svg"
+          alt="logo"
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[78px] h-[11px]"
+        />
+      </span>
+      <div
+        class="absolute bottom-10 left-1/2 w-full -translate-x-1/2 max-w-[550px]"
+      >
+        <h1 class="text-white text-xs uppercase text-center max-sm:text-[10px]">
+          18+ ПРОДАЖА <br class="block sm:hidden" />
+          НЕСОВЕРШЕННОЛЕТНИМ ЗАПРЕЩЕНА
+        </h1>
+        <p class="text-zinc-500 text-xs text-center max-sm:text-[10px]">
+          Сайт используется исключительно <br class="block sm:hidden" />
+          в целях информирования действующих потребителей продукции SOAK
+        </p>
+      </div>
+    </div>
+
+    <!------------------- These scripts must be on all pages --------------------------->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/imask/7.5.0/imask.min.js"
+      integrity="sha512-U/YSJLyyCl9/Kb/4wQ928C6GCStH8A73R/tzdbWP0vIvNwsjtFGbGJLZrSmuhoo5pyBYi5i6vBy3HDVP/jqMcw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="scripts/header.js"></script>
+    <script src="scripts/pupup.js"></script>
+    <script src="scripts/play-pause-observer.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/media-video-start.js"></script>
+
+    <!------------------- These scripts are for the main page--------------------------->
+    <script src="scripts/cooperation-form.js"></script>
+    <script src="scripts/home.js"></script>
+  </body>
+</html>

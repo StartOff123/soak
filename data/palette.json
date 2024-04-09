@@ -1,0 +1,37 @@
+[
+  { "title": "Абрикос", "img": "1.png", "type": "fruits_and_berries" },
+  { "title": "Абрикосовый джем", "img": "2.png", "type": "dessert" },
+  { "title": "Айва Кардамон", "img": "3.png", "type": "dessert" },
+  { "title": "Алоэ вера", "img": "4.png", "type": "unusual" },
+  { "title": "Ананасовый сироп", "img": "5.png", "type": "beverages" },
+  { "title": "Анисовое яблоко", "img": "6.png", "type": "fruits_and_berries" },
+  { "title": "Арахисовая паста", "img": "7.png", "type": "dessert" },
+  { "title": "Арахисовый батончик", "img": "8.png", "type": "dessert" },
+  { "title": "Арбузный смузи", "img": "9.png", "type": "beverages" },
+  { "title": "Бабл Гам", "img": "10.png", "type": "unusual" },
+  { "title": "Банан с финиками", "img": "11.png", "type": "fruits_and_berries" },
+  { "title": "Банановый кекс", "img": "12.png", "type": "dessert" },
+  { "title": "Барбарис", "img": "13.png", "type": "unusual" },
+  { "title": "Березовый сок", "img": "14.png", "type": "beverages" },
+  { "title": "Бразильский асаи", "img": "15.png", "type": "unusual" },
+  { "title": "Булочка с корицей", "img": "16.png", "type": "dessert" },
+  {
+    "title": "Ванильная груша с лаймом",
+    "img": "17.png",
+    "type": "fruits_and_berries"
+  },
+  { "title": "Вафли", "img": "18.png", "type": "dessert" },
+  {
+    "title": "Виноград Изабелла",
+    "img": "19.png",
+    "type": "fruits_and_berries"
+  },
+  { "title": "Вишневая газировка", "img": "20.png", "type": "beverages" },
+  { "title": "Вишневая сигара", "img": "21.png", "type": "unusual" },
+  { "title": "Газировка с лаймом", "img": "22.png", "type": "beverages" },
+  { "title": "Гималайский черный чай", "img": "23.png", "type": "beverages" },
+  { "title": "Горная розовая лаванда", "img": "24.png", "type": "unusual" },
+  { "title": "Гранатовый пунш", "img": "25.png", "type": "dessert" },
+  { "title": "Грейпфрут Киви", "img": "26.png", "type": "fruits_and_berries" },
+  { "title": "Грейпфрут тархун", "img": "27.png", "type": "fruits_and_berries" }
+]
