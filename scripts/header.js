@@ -32,11 +32,15 @@ const headerSublinksArr = {
     },
     {
       href: "",
+      title: "Мерч",
+    },
+    {
+      href: "",
       title: "Новости",
     },
     {
       href: "",
-      title: "Карта",
+      title: "Карта магазинов",
     },
   ],
   products: [
@@ -64,15 +68,15 @@ const headerSublinksArr = {
   distribution: [
     {
       href: "",
-      title: "Награды",
-    },
-    {
-      href: "",
       title: "О нас",
     },
     {
       href: "",
-      title: "Оставить заявку",
+      title: "Сотрудничество",
+    },
+    {
+      href: "",
+      title: "Карта магазинов",
     },
   ],
   cooperation: [
@@ -101,6 +105,10 @@ const headerSublinksArr = {
     {
       href: "",
       title: "FAQ",
+    },
+    {
+      href: "",
+      title: "Карта магазинов",
     },
   ],
 };

@@ -46,7 +46,7 @@
               />
             </a>
             <nav
-              class="flex items-center gap-x-10 max-lg:gap-x-4 max-lg:text-sm max-md:hidden"
+              class="flex items-center gap-x-[37px] max-lg:gap-x-4 max-lg:text-sm max-md:hidden"
             >
               <a
                 id="header-link"
@@ -86,7 +86,7 @@
             </nav>
           </div>
           <button
-            class="px-2 h-full max-lg:px-0 max-lg:pl-4"
+            class="px-0.5 h-full max-lg:px-0 max-lg:pl-4"
             onclick="handleToggleSearch()"
           >
             <img src="assets/icons/search.svg" alt="search" />
@@ -96,12 +96,12 @@
       <!-- Header Sutlinks -->
       <div
         id="header-sublinks"
-        class="fixed top-[75px] left-0 w-full h-[300px] opacity-0 pointer-events-none transition duration-700 max-md:hidden"
+        class="fixed top-[75px] left-0 w-full h-[275px] opacity-0 pointer-events-none transition duration-700 max-md:hidden"
       >
         <div class="main-container h-full">
           <div
             id="header-sublinks-block"
-            class="h-full flex flex-col gap-y-[20px] items-center justify-center"
+            class="h-full flex flex-col gap-y-[17px] items-center justify-center pb-8 pt-4"
           ></div>
         </div>
       </div>
@@ -109,38 +109,40 @@
       <!-- Header Search -->
       <div
         id="header-search"
-        class="fixed top-[75px] left-0 w-full h-[300px] opacity-0 pointer-events-none transition duration-700 max-md:h-full max-md:top-[55px]"
+        class="fixed top-[75px] left-0 w-full h-[275px] opacity-0 pointer-events-none transition duration-700 max-md:h-full max-md:top-[55px]"
       >
         <div class="main-container h-full">
-          <div
-            class="h-full flex flex-col justify-center gap-y-10 max-md:justify-start max-md:pt-[30px]"
-          >
+          <div class="h-full flex flex-col gap-y-9 pt-[40px] max-md:pt-[30px]">
             <div class="flex items-center gap-x-4">
               <img
                 src="assets/icons/search.svg"
                 alt="search"
-                class="opacity-70"
+                class="opacity-70 w-[20px] h-[20px]"
               />
               <input
                 type="text"
                 placeholder="Найти свой SOAK"
-                class="text-white bg-transparent border-none outline-none ring-0 placeholder:text-zinc-500"
+                class="text-white bg-transparent tracking-[0.3px] border-none outline-none ring-0 placeholder:text-zinc-500"
               />
             </div>
             <div class="flex flex-col gap-y-6">
-              <h1 class="text-zinc-500 text-xs">Возgожно вы искали:</h1>
-              <div class="space-y-[10px]">
+              <h1 class="text-zinc-500 text-xs">Возможно вы искали:</h1>
+              <div class="space-y-[7px]">
                 <a href="" class="text-white block text-xs"
-                  ><font class="text-zinc-500">→</font> SOAK X</a
+                  ><font class="text-zinc-500 tracking-[0.3px]">→</font> SOAK
+                  X</a
                 >
                 <a href="" class="text-white block text-xs"
-                  ><font class="text-zinc-500">→</font> SOAK W</a
+                  ><font class="text-zinc-500 tracking-[0.3px]">→</font> SOAK
+                  W</a
                 >
                 <a href="" class="text-white block text-xs"
-                  ><font class="text-zinc-500">→</font> SOAK L</a
+                  ><font class="text-zinc-500 tracking-[0.3px]">→</font> SOAK
+                  L</a
                 >
                 <a href="" class="text-white block text-xs"
-                  ><font class="text-zinc-500">→</font> SOAK S</a
+                  ><font class="text-zinc-500 tracking-[0.3px]">→</font> SOAK
+                  S</a
                 >
               </div>
             </div>
@@ -322,12 +324,12 @@
                           <img
                             src="assets/img/r-new-1.png"
                             alt="r"
-                            class="absolute top-7 right-7 z-[1] max-lg:w-[150px] transition duration-700-all group-hover:scale-125 group-hover:rotate-6 duration-700 max-lg:right-5 max-sm:scale-110 max-sm:top-10"
+                            class="absolute top-[30px] right-7 z-[1] max-lg:w-[150px] transition duration-700-all group-hover:scale-125 group-hover:rotate-6 duration-700 max-lg:right-5 max-sm:scale-110 max-sm:top-10"
                           />
                           <img
                             src="assets/img/r-new-2.png"
                             alt="r"
-                            class="absolute top-7 left-7 transition duration-700-all group-hover:scale-125 group-hover:-rotate-6 duration-700 max-lg:w-[150px] max-lg:left-5 max-sm:top-11"
+                            class="absolute bottom-16 left-7 transition duration-700-all group-hover:scale-125 group-hover:-rotate-6 duration-700 max-lg:w-[150px] max-lg:left-5 max-sm:top-11"
                           />
                         </a>
                         <span
@@ -381,7 +383,7 @@
                           <img
                             src="assets/img/l-new-2.png"
                             alt="r"
-                            class="absolute top-7 left-7 transition duration-700-all group-hover:scale-125 group-hover:-rotate-6 duration-700 max-lg:w-[150px] max-lg:left-5"
+                            class="absolute bottom-16 left-8 transition duration-700-all group-hover:scale-125 group-hover:-rotate-6 duration-700 max-lg:w-[150px] max-lg:left-5"
                           />
                         </a>
                         <span
@@ -392,7 +394,7 @@
                     <!-- Item -->
                   </div>
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination mt-4"></div>
               </div>
             </div>
           </div>
@@ -833,10 +835,10 @@
                   ></video>
                 </div>
                 <div
-                  class="max-w-[935px] space-y-7 z-[2] translate-y-[calc(100%-100px)] group-hover:translate-y-0 transition duration-700 max-lg:translate-y-[calc(100%-60px)] max-md:space-y-4"
+                  class="max-w-[935px] space-y-7 z-[2] translate-y-[calc(100%-110px)] group-hover:translate-y-0 transition duration-700 max-lg:translate-y-[calc(100%-60px)] max-md:space-y-4"
                 >
                   <h1
-                    class="text-white text-6xl max-lg:text-4xl max-sm:text-2xl"
+                    class="text-white text-6xl tracking-[0.3px] max-lg:text-4xl max-sm:text-2xl"
                   >
                     Маркетинговые <br />
                     мероприятия
@@ -873,10 +875,10 @@
                   ></video>
                 </div>
                 <div
-                  class="max-w-[935px] space-y-7 z-[2] translate-y-[calc(100%-100px)] group-hover:translate-y-0 transition duration-700 max-lg:translate-y-[calc(100%-60px)] max-md:space-y-4"
+                  class="max-w-[935px] space-y-7 z-[2] translate-y-[calc(100%-110px)] group-hover:translate-y-0 transition duration-700 max-lg:translate-y-[calc(100%-60px)] max-md:space-y-4"
                 >
                   <h1
-                    class="text-white text-6xl max-lg:text-4xl max-sm:text-2xl"
+                    class="text-white text-6xl tracking-[0.3px] max-lg:text-4xl max-sm:text-2xl"
                   >
                     Наша <br />
                     миссия
@@ -913,13 +915,13 @@
                   ></video>
                 </div>
                 <div
-                  class="max-w-[935px] space-y-7 z-[2] translate-y-[calc(100%-100px)] group-hover:translate-y-0 transition duration-700 max-lg:translate-y-[calc(100%-60px)] max-md:space-y-4"
+                  class="max-w-[935px] space-y-7 z-[2] translate-y-[calc(100%-110px)] group-hover:translate-y-0 transition duration-700 max-lg:translate-y-[calc(100%-60px)] max-md:space-y-4"
                 >
                   <h1
-                    class="text-white text-6xl max-lg:text-4xl max-sm:text-2xl"
+                    class="text-white text-6xl max-lg:text-4xl max-sm:text-2xl tracking-[0.3px]"
                   >
                     Гарантия <br />
-                    Качества
+                    качества
                   </h1>
                   <p class="text-zinc-500 max-sm:text-xs">
                     <font class="text-white">
@@ -997,32 +999,41 @@
                 muted
               ></video>
             </div>
-            <div class="z-[1] space-y-7 text-center max-sm:space-y-4">
-              <h1 class="text-white text-6xl max-sm:text-2xl">Стиль SOAK</h1>
+            <div
+              class="z-[1] flex flex-col items-center justify-between h-full py-8"
+            >
+              <h1 class="text-white text-6xl tracking-[0.3px] max-sm:text-2xl">
+                Стиль SOAK
+              </h1>
               <p
-                class="text-zinc-500 text-center max-sm:text-xs max-sm:max-w-[250px]"
+                class="text-zinc-500 text-center tracking-[0.3px] pb-4 pl-2 max-sm:text-xs max-sm:max-w-[250px]"
               >
                 Смотри подробнее в нашем Telegram канале
               </p>
-              <button class="btn-telegram mx-auto">
-                <svg
-                  width="50.000000"
-                  height="24.000000"
-                  viewBox="0 0 30 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                >
-                  <path
-                    id="Иконка"
-                    d="M1.62 9.77C9.63 6.28 14.98 3.98 17.65 2.87C25.29 -0.31 26.88 -0.86 27.91 -0.88C28.14 -0.88 28.65 -0.83 28.98 -0.56C29.26 -0.33 29.33 -0.03 29.37 0.18C29.4 0.4 29.45 0.89 29.41 1.27C29 5.62 27.21 16.17 26.3 21.04C25.91 23.1 25.15 23.79 24.42 23.86C22.82 24 21.61 22.8 20.06 21.79C17.64 20.2 16.28 19.21 13.93 17.67C11.21 15.88 12.97 14.89 14.52 13.29C14.92 12.87 21.96 6.47 22.1 5.89C22.11 5.81 22.13 5.54 21.97 5.4C21.81 5.26 21.57 5.3 21.4 5.34C21.16 5.4 17.29 7.95 9.8 13.01C8.7 13.76 7.71 14.13 6.82 14.11C5.83 14.09 3.95 13.56 2.54 13.1C0.82 12.54 -0.55 12.24 -0.43 11.29C-0.37 10.8 0.31 10.29 1.62 9.77Z"
-                    fill="currentColor"
-                    fill-opacity="1.000000"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-                <span>Перейти в Telegram</span>
-              </button>
+              <div class="pl-2 pb-2.5">
+                <button class="btn-telegram mx-auto">
+                  <svg
+                    width="50.000000"
+                    height="24.000000"
+                    viewBox="0 0 30 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      id="Иконка"
+                      d="M1.62 9.77C9.63 6.28 14.98 3.98 17.65 2.87C25.29 -0.31 26.88 -0.86 27.91 -0.88C28.14 -0.88 28.65 -0.83 28.98 -0.56C29.26 -0.33 29.33 -0.03 29.37 0.18C29.4 0.4 29.45 0.89 29.41 1.27C29 5.62 27.21 16.17 26.3 21.04C25.91 23.1 25.15 23.79 24.42 23.86C22.82 24 21.61 22.8 20.06 21.79C17.64 20.2 16.28 19.21 13.93 17.67C11.21 15.88 12.97 14.89 14.52 13.29C14.92 12.87 21.96 6.47 22.1 5.89C22.11 5.81 22.13 5.54 21.97 5.4C21.81 5.26 21.57 5.3 21.4 5.34C21.16 5.4 17.29 7.95 9.8 13.01C8.7 13.76 7.71 14.13 6.82 14.11C5.83 14.09 3.95 13.56 2.54 13.1C0.82 12.54 -0.55 12.24 -0.43 11.29C-0.37 10.8 0.31 10.29 1.62 9.77Z"
+                      fill="currentColor"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                  <span
+                    >Перейти <br />
+                    в Telegram</span
+                  >
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -1032,7 +1043,7 @@
       <!-- News Section -->
       <section title="news">
         <div class="main-container">
-          <div class="space-y-14 max-sm:space-y-7">
+          <div class="space-y-[50px] max-sm:space-y-7">
             <!-- Section Title -->
             <div class="text-center space-y-3.5 max-sm:space-y-3">
               <h1 class="text-white text-6xl max-md:text-5xl max-sm:text-2xl">
@@ -1052,7 +1063,7 @@
                   <div class="swiper-slide">
                     <!-- News Item -->
                     <div
-                      class="mx-auto space-y-10 w-[360px] max-sm:w-[220px] max-sm:space-y-4"
+                      class="mx-auto space-y-9 w-[360px] max-sm:w-[220px] max-sm:space-y-4"
                     >
                       <a
                         href=""
@@ -1069,7 +1080,9 @@
                           Подробнее
                         </span>
                       </a>
-                      <p class="text-white text-center max-sm:text-xs">
+                      <p
+                        class="text-white text-center tracking-[0.3px] leading-[22.4px] max-sm:text-xs"
+                      >
                         Лови вторую часть гороскопа электронок на 2024 год!
                       </p>
                     </div>
@@ -1078,7 +1091,7 @@
                   <div class="swiper-slide">
                     <!-- News Item -->
                     <div
-                      class="mx-auto space-y-10 w-[360px] max-sm:w-[220px] max-sm:space-y-4"
+                      class="mx-auto space-y-9 w-[360px] max-sm:w-[220px] max-sm:space-y-4"
                     >
                       <a
                         href=""
@@ -1095,8 +1108,11 @@
                           Подробнее
                         </span>
                       </a>
-                      <p class="text-white text-center max-sm:text-xs">
-                        Наш язык любви - это однозначно подарки
+                      <p
+                        class="text-white text-center tracking-[0.3px] leading-[22.4px] max-sm:text-xs"
+                      >
+                        Наш язык любви — <br />
+                        это однозначно подарки
                       </p>
                     </div>
                     <!-- News Item -->
@@ -1104,7 +1120,7 @@
                   <div class="swiper-slide">
                     <!-- News Item -->
                     <div
-                      class="mx-auto space-y-10 w-[360px] max-sm:w-[220px] max-sm:space-y-4"
+                      class="mx-auto space-y-9 w-[360px] max-sm:w-[220px] max-sm:space-y-4"
                     >
                       <a
                         href=""
@@ -1121,7 +1137,9 @@
                           Подробнее
                         </span>
                       </a>
-                      <p class="text-white text-center max-sm:text-xs">
+                      <p
+                        class="text-white text-center tracking-[0.3px] leading-[22.4px] max-sm:text-xs"
+                      >
                         Продолжаем серию ножиданных коллабораций...
                       </p>
                     </div>
@@ -1138,7 +1156,7 @@
       <!-- News Section -->
 
       <!-- Сooperation Section -->
-      <section title="cooperation">
+      <section title="cooperation" class="py-10">
         <div class="main-container">
           <div class="relative bg-black rounded-[40px] max-sm:rounded-[20px]">
             <div
@@ -1156,19 +1174,19 @@
               <img
                 src="assets/img/cooperation-1.png"
                 alt="cooperation"
-                class="absolute -top-[150px] -left-[120px] max-sm:top-auto max-sm:left-auto max-sm:-bottom-[40px] max-sm:-right-[80px] max-sm:h-[190px] max-sm:w-[177px] max-sm:-rotate-[20deg]"
+                class="absolute -top-[150px] -left-[140px] max-sm:top-auto max-sm:left-auto max-sm:-bottom-[40px] max-sm:-right-[80px] max-sm:h-[190px] max-sm:w-[177px] max-sm:-rotate-[20deg]"
               />
               <img
                 src="assets/img/cooperation-2.png"
                 alt="cooperation"
-                class="absolute -bottom-[100px] -right-[120px] pointer-events-none max-sm:hidden"
+                class="absolute -bottom-[85px] -right-[115px] pointer-events-none max-sm:hidden"
               />
               <form
                 id="confirmation-form"
-                class="space-y-[50px] max-sm:space-y-7"
+                class="space-y-[48px] max-sm:space-y-7"
               >
                 <h1
-                  class="text-center text-white text-6xl max-lg:text-4xl max-sm:text-2xl"
+                  class="text-center text-white text-6xl tracking-[0.3px] max-lg:text-4xl max-sm:text-2xl"
                 >
                   Сотрудничество
                 </h1>
@@ -1206,14 +1224,14 @@
                     class="input max-[880px]:row-start-5"
                   />
                   <div class="flex gap-4">
-                    <div class="w-[20px] h-[20px]">
+                    <div class="w-[20px] h-[20px] pt-1">
                       <input
                         id="is-confirm-policy"
                         type="checkbox"
                         class="checkbox"
                       />
                     </div>
-                    <p class="text-white text-xs">
+                    <p class="text-white text-xs tracking-[0.3px]">
                       Я согласен с
                       <a
                         href=""
@@ -1277,14 +1295,14 @@
                 Карта магазинов
               </h1>
               <p
-                class="text-zinc-500 mx-auto tracking-[0.3px] text-center max-md:text-sm max-sm:text-xs max-sm:max-w-[180px]"
+                class="text-zinc-500 tracking-[0.3px] max-md:text-sm max-sm:text-xs"
               >
                 Найдите свой SOAK среди 5897 магазинов
               </p>
             </div>
             <!-- Section Title -->
 
-            <div class="space-y-10 max-sm:space-y-7">
+            <div class="space-y-8 max-sm:space-y-7">
               <div
                 class="relative h-[440px] rounded-[40px] max-sm:rounded-[20px] max-sm:h-[400px] overflow-hidden"
               >
@@ -1295,7 +1313,9 @@
               </div>
 
               <div class="text-center">
-                <a href="" class="text-white hover:underline max-sm:text-xs"
+                <a
+                  href=""
+                  class="text-white tracking-[1px] underline max-sm:text-xs"
                   >Добавь свой магазин</a
                 >
               </div>
@@ -1308,10 +1328,12 @@
       <!-- Popular Section -->
       <section title="popular">
         <div class="main-container">
-          <div class="space-y-14 max-sm:space-y-7">
+          <div class="space-y-10 max-sm:space-y-7">
             <!-- Section Title -->
             <div class="text-center space-y-3.5 max-sm:space-y-3">
-              <h1 class="text-white text-6xl max-md:text-5xl max-sm:text-2xl">
+              <h1
+                class="text-white text-6xl tracking-[0.3px] max-md:text-5xl max-sm:text-2xl"
+              >
                 Популярные продукты
               </h1>
             </div>
@@ -1472,13 +1494,15 @@
         <video src="assets/video/fon-1.mp4" loop muted autoplay></video>
       </span>
       <div
-        class="main-container space-y-[60px] relative z-[1] pt-[60px] pb-10 max-sm:space-y-10 max-sm:pt-[30px] max-sm:pb-[10px]"
+        class="main-container space-y-[52px] relative z-[1] pt-[60px] pb-10 max-sm:space-y-10 max-sm:pt-[30px] max-sm:pb-[10px]"
       >
         <!-- Footer Top -->
         <div
-          class="grid grid-cols-5 gap-y-7 max-[940px]:grid-cols-3 max-sm:block"
+          class="grid grid-cols-[290px_1fr_1fr_1fr_1fr] gap-y-[27px] max-[940px]:grid-cols-3 max-sm:block"
         >
-          <div class="w-[190px] space-y-10 row-span-2 max-sm:mx-auto">
+          <div
+            class="w-[190px] space-y-[38px] row-span-2 max-sm:mx-auto max-sm:space-y-[30px]"
+          >
             <img
               src="assets/icons/logo.svg"
               alt="logo"
@@ -1511,7 +1535,7 @@
                 >Поддержка</a
               >
             </div>
-            <div class="space-y-5">
+            <div class="space-y-5 max-sm:space-y-3.5">
               <button class="btn-m !py-2.5">
                 Задать <br />
                 свой вопрос
@@ -1527,10 +1551,10 @@
             </div>
           </div>
           <div
-            class="space-y-10 mx-auto max-[940px]:m-0 max-md:text-sm max-md:space-y-5 max-md:pl-10 max-sm:hidden"
+            class="space-y-8 ml-5 max-[940px]:m-0 max-md:text-sm max-md:space-y-5 max-md:pl-10 max-sm:hidden"
           >
-            <h1 class="text-white">Главная</h1>
-            <div class="space-y-[14px]">
+            <h1 class="text-white tracking-[0.3px] leading-[15px]">Главная</h1>
+            <div class="space-y-[7px]">
               <a
                 href=""
                 class="block text-zinc-500 hover:text-white transition duration-500"
@@ -1559,10 +1583,12 @@
             </div>
           </div>
           <div
-            class="space-y-10 mx-auto max-[940px]:m-0 max-md:text-sm max-md:space-y-5 max-md:pl-10 max-sm:hidden"
+            class="space-y-8 ml-5 max-[940px]:m-0 max-md:text-sm max-md:space-y-5 max-md:pl-10 max-sm:hidden"
           >
-            <h1 class="text-white">Продукция</h1>
-            <div class="space-y-[14px]">
+            <h1 class="text-white tracking-[0.3px] leading-[15px]">
+              Продукция
+            </h1>
+            <div class="space-y-[7px]">
               <a
                 href=""
                 class="block text-zinc-500 hover:text-white transition duration-500"
@@ -1591,10 +1617,12 @@
             </div>
           </div>
           <div
-            class="space-y-10 mx-auto max-[940px]:m-0 max-md:text-sm max-md:space-y-5 max-md:pl-10 max-sm:hidden"
+            class="space-y-8 ml-auto mr-2.5 max-[940px]:m-0 max-md:text-sm max-md:space-y-5 max-md:pl-10 max-sm:hidden"
           >
-            <h1 class="text-white">Сотрудничество</h1>
-            <div class="space-y-[14px]">
+            <h1 class="text-white tracking-[0.3px] leading-[15px]">
+              Сотрудничество
+            </h1>
+            <div class="space-y-[7px]">
               <a
                 href=""
                 class="block text-zinc-500 hover:text-white transition duration-500"
@@ -1613,10 +1641,12 @@
             </div>
           </div>
           <div
-            class="space-y-10 mx-auto max-[940px]:m-0 max-md:text-sm max-md:space-y-5 max-md:pl-10 max-sm:hidden"
+            class="space-y-8 ml-auto max-[940px]:m-0 max-md:text-sm max-md:space-y-5 max-md:pl-10 max-sm:hidden"
           >
-            <h1 class="text-white">Поддержка</h1>
-            <div class="space-y-[14px]">
+            <h1 class="text-white tracking-[0.3px] leading-[15px]">
+              Поддержка
+            </h1>
+            <div class="space-y-[7px]">
               <a
                 href=""
                 class="block text-zinc-500 hover:text-white transition duration-500"
@@ -1640,13 +1670,15 @@
 
         <!-- Footer Bottom -->
         <div
-          class="flex justify-between items-center gap-x-7 max-sm:flex-col-reverse max-sm:gap-y-10"
+          class="flex justify-between items-end gap-x-7 max-sm:flex-col-reverse max-sm:gap-y-[32px] max-sm:items-center"
         >
-          <div class="space-y-5 max-sm:space-y-[15px]">
-            <h1 class="text-white uppercase">
+          <div class="space-y-2 max-sm:space-y-[10px]">
+            <h1 class="text-white uppercase leading-[17.6px] tracking-[0.3px]">
               ПРОДАЖА НЕСОВЕРШЕННОЛЕТНИМ ЗАПРЕЩЕНА
             </h1>
-            <p class="text-xs text-zinc-500 max-w-[810px] max-md:text-[10px]">
+            <p
+              class="text-xs text-zinc-500 max-w-[731px] leading-[16.8px] tracking-[0.3px] max-md:text-[10px] max-sm:leading-[14px] max-sm:pr-[3px]"
+            >
               Этот сайт содержит информацию о продуктах, предназначенных только
               для лиц старше 18 лет, проживающих в РФ, которые в противном
               случае продолжат курить или употреблять иную никотинсодержащую
@@ -1656,7 +1688,7 @@
               исключает риски
             </p>
           </div>
-          <div class="space-y-8 max-sm:space-y-10">
+          <div class="space-y-6 max-sm:space-y-[30px]">
             <div
               class="flex items-center gap-x-[30px] justify-end max-sm:justify-center"
             >
@@ -1705,14 +1737,14 @@
                 />
               </a>
             </div>
-            <div class="space-y-5 max-sm:space-y-[15px]">
+            <div class="space-y-2 max-sm:space-y-1">
               <a
                 href=""
-                class="text-zinc-500 text-right text-xs uppercase hover:text-white transition duration-700 whitespace-nowrap max-md:text-[10px] max-sm:text-center"
+                class="text-zinc-500 text-right text-xs uppercase tracking-[0.3px] hover:text-white transition duration-700 whitespace-nowrap max-md:text-[10px] max-sm:text-center max-sm:pl-2"
                 >ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a
               >
               <p
-                class="text-zinc-500 text-right text-xs max-md:text-[10px] max-sm:text-center"
+                class="text-zinc-500 text-right text-xs max-md:text-[10px] max-sm:text-center tracking-[0.3px]"
               >
                 ©2024. ВСЕ ПРАВА ЗАЩИЩЕНЫ
               </p>
