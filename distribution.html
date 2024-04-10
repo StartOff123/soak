@@ -20,7 +20,7 @@
           <button
             id="burger-menu-btn"
             onclick="openCloseMenu()"
-            class="hidden relative w-[18px] h-[18px] max-md:block transition-all duration-700"
+            class="hidden relative w-[18px] h-[18px] max-md:block transition-all duration-700 mx-2"
           >
             <span
               class="absolute w-full h-0.5 bg-white left-0 top-0 transition-all duration-700 rounded"
@@ -66,7 +66,7 @@
                 id="header-link"
                 data-page="distribution"
                 href="distribution.html"
-                class="text-zinc-500 hover:text-white h-full flex items-center transition duration-700 link-active"
+                class="text-zinc-500 hover:text-white h-full flex items-center transition duration-700  link-active"
                 >Дистрибуция</a
               >
               <a
@@ -86,7 +86,7 @@
             </nav>
           </div>
           <button
-            class="px-0.5 h-full max-lg:px-0 max-lg:pl-4"
+            class="px-0.5 h-full max-lg:px-0 max-lg:pl-4 max-md:px-2"
             onclick="handleToggleSearch()"
           >
             <img src="assets/icons/search.svg" alt="search" />
@@ -101,7 +101,7 @@
         <div class="main-container h-full">
           <div
             id="header-sublinks-block"
-            class="h-full flex flex-col gap-y-[17px] items-center pb-8 pt-4"
+            class="h-full flex flex-col gap-y-[17px] items-center justify-center pb-8 pt-4"
           ></div>
         </div>
       </div>
@@ -112,12 +112,14 @@
         class="fixed top-[75px] left-0 w-full h-[275px] opacity-0 pointer-events-none transition duration-700 max-md:h-full max-md:top-[55px]"
       >
         <div class="main-container h-full">
-          <div class="h-full flex flex-col gap-y-9 pt-[40px] max-md:pt-[30px]">
+          <div
+            class="h-full flex flex-col gap-y-9 pt-[40px] max-md:pt-[22px] max-md:gap-y-[38px]"
+          >
             <div class="flex items-center gap-x-4">
               <img
                 src="assets/icons/search.svg"
                 alt="search"
-                class="opacity-70 w-[20px] h-[20px]"
+                class="opacity-70 w-[20px] h-[20px] max-md:w-[16px] max-md:h-[16px] max-md:ml-2"
               />
               <input
                 type="text"
@@ -125,9 +127,11 @@
                 class="text-white bg-transparent tracking-[0.3px] border-none outline-none ring-0 placeholder:text-zinc-500"
               />
             </div>
-            <div class="flex flex-col gap-y-6">
-              <h1 class="text-zinc-500 text-xs">Возможно вы искали:</h1>
-              <div class="space-y-[7px]">
+            <div class="flex flex-col gap-y-6 max-md:gap-y-[22px]">
+              <h1 class="text-zinc-500 tracking-[0.3px] text-xs">
+                Возможно вы искали:
+              </h1>
+              <div class="space-y-[7px] max-md:space-y-[12px]">
                 <a href="" class="text-white block text-xs"
                   ><font class="text-zinc-500 tracking-[0.3px]">→</font> SOAK
                   X</a
@@ -153,11 +157,11 @@
       <!-- Header Menu -->
       <div
         id="header-menu"
-        class="fixed top-[55px] left-0 h-[calc(100%-55px)] w-full opacity-0 pointer-events-none transition duration-700 pt-[60px]"
+        class="fixed top-[55px] left-0 h-[calc(100%-55px)] w-full opacity-0 pointer-events-none transition duration-700 pt-[65px]"
       >
         <div class="main-container h-full">
           <div class="flex flex-col h-full">
-            <div class="flex flex-col gap-y-[20px] items-center">
+            <div class="flex flex-col gap-y-[22px] items-center">
               <a
                 href="index.html"
                 class="text-zinc-500 hover:text-white active:text-white transition duration-700"
@@ -185,10 +189,10 @@
               >
             </div>
             <div
-              class="flex flex-col flex-1 items-center justify-end gap-y-[25px] pb-[40px]"
+              class="flex flex-col flex-1 items-center justify-end gap-y-[20px]"
             >
               <div
-                class="flex items-center gap-x-[30px] justify-end max-sm:justify-center"
+                class="flex items-center gap-x-[25px] justify-end max-sm:justify-center"
               >
                 <a
                   href=""
@@ -235,14 +239,14 @@
                   />
                 </a>
               </div>
-              <div class="flex flex-col items-center gap-y-[15px]">
+              <div class="flex flex-col items-center gap-y-[7px]">
                 <a
                   href=""
-                  class="text-zinc-500 text-right text-xs uppercase hover:text-white transition duration-700 whitespace-nowrap max-md:text-[10px] max-sm:text-center"
+                  class="text-zinc-500 text-right text-xs tracking-[0.3px] uppercase hover:text-white transition duration-700 whitespace-nowrap max-md:text-[10px] max-sm:text-center"
                   >ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a
                 >
                 <p
-                  class="text-zinc-500 text-right text-xs max-md:text-[10px] max-sm:text-center"
+                  class="text-zinc-500 text-right tracking-[0.3px] text-xs max-md:text-[10px] max-sm:text-center"
                 >
                   ©2024. ВСЕ ПРАВА ЗАЩИЩЕНЫ
                 </p>
@@ -263,27 +267,29 @@
 
     <main
       id="main"
-      class="overflow-hidden space-y-20 py-20 max-sm:space-y-10 max-sm:py-10"
+      class="overflow-hidden space-y-[75px] py-[75px] max-sm:space-y-[35px] max-sm:py-[35px]"
     >
       <!-- Why Us Section -->
       <section title="why-us">
         <div class="main-container">
           <div class="space-y-[52px] max-sm:space-y-7">
             <!-- Section Title -->
-            <div class="text-center space-y-3.5 max-sm:space-y-3">
-              <h1 class="text-white text-6xl max-md:text-5xl leading-[60px] tracking-[0.3px] max-sm:text-2xl">
+            <div class="text-center space-y-3.5 max-sm:space-y-1">
+              <h1
+                class="text-white text-6xl max-md:text-5xl leading-[60px] tracking-[0.3px] max-sm:text-2xl"
+              >
                 Почему мы?
               </h1>
               <p
                 class="text-zinc-500 tracking-[0.3px] max-md:text-sm max-sm:text-xs"
               >
-                разложим по полочкам почему вы должны выбрать нас
+                разложим по полочкам почему <br class="md:hidden"> вы должны выбрать нас
               </p>
             </div>
             <!-- Section Title -->
 
             <div
-              class="relative bg-black grid grid-cols-[1fr_auto] rounded-[40px] p-10 pt-9 max-md:flex max-md:flex-col-reverse max-md:gap-y-[19px] max-sm:p-4 max-sm:rounded-[20px]"
+              class="relative bg-black grid grid-cols-[1fr_auto] rounded-[40px] p-10 pt-9 max-md:flex max-md:flex-col-reverse max-md:gap-y-[25px] max-sm:p-4 max-sm:rounded-[20px]"
             >
               <div
                 class="absolute size-full top-0 left-0 overflow-hidden rounded-[40px] max-sm:rounded-[20px]"
@@ -299,22 +305,22 @@
                   ></video>
                 </span>
               </div>
-              <div class="flex-1 space-y-3 max-lg:space-y-4">
+              <div class="flex-1 space-y-3 max-lg:space-y-2">
                 <h1
                   class="text-white text-6xl max-xl:text-4xl tracking-[0.3px] max-[885px]:text-3xl max-sm:text-2xl leading-none max-sm:leading-[110%]"
                 >
                   Мы победители
                 </h1>
                 <p
-                  class="text-zinc-500 pb-8 leading-[22.4px] tracking-[0.3px] max-[885px]:text-sm max-md:pb-[14px] max-sm:text-xs max-sm:leading-[140%]"
+                  class="text-zinc-500 pb-12 leading-[22.4px] tracking-[0.3px] max-[885px]:text-sm max-md:pb-[14px] max-sm:text-xs max-sm:leading-[16.8px]"
                 >
                   Один из самых упоминаемых брендов <br class="max-md:hidden" />
-                  одноразовых ЭСДН в России в 2023 году
+                  одноразовых ЭСДН <br class="md:hidden"> в России в 2023 году
                   <br class="max-md:hidden" />
                   по данным Fedotov Group <br /><br />
                   Один из самых упоминаемых брендов жидкостей
                   <br class="max-md:hidden" />
-                  для ЭСДН в России в 2023 году по данным
+                  для ЭСДН <br class="md:hidden"> в России в 2023 году по данным
                   <br class="max-md:hidden" />
                   Fedotov Group <br /><br />
                   Победитель конкурса "Наша марка" <br />
@@ -375,7 +381,7 @@
       <section title="about" class="w-full">
         <div class="main-container">
           <div
-            class="grid grid-rows-[450px,450px] grid-cols-2 gap-10 max-lg:flex max-lg:flex-col max-sm:gap-5"
+            class="grid grid-rows-[450px,450px,450px] grid-cols-2 gap-10 max-lg:flex max-lg:flex-col max-sm:gap-5"
           >
             <!-- Block -->
             <div
@@ -383,7 +389,7 @@
               class="relative group col-span-2 overflow-hidden rounded-[40px] p-10 !bg-cover !bg-center flex items-end max-md:h-[350px] max-sm:text-2xl max-sm:h-[256px] max-sm:p-2 max-sm:rounded-[20px]"
             >
               <div
-                class="max-w-[935px] space-y-7 z-[2] translate-y-[calc(100%-110px)] group-hover:translate-y-0 transition duration-700 max-lg:translate-y-[calc(100%-60px)] max-md:space-y-4"
+                class="max-w-[935px] space-y-7 z-[2] translate-y-[calc(100%-110px)] group-hover:translate-y-0 transition duration-700 max-lg:translate-y-[calc(100%-50px)] max-md:space-y-4"
               >
                 <h1
                   class="text-white text-6xl max-lg:text-4xl leading-none max-sm:text-2xl max-sm:leading-[110%]"
@@ -414,7 +420,7 @@
               class="relative overflow-hidden group col-span-1 rounded-[40px] p-10 !bg-cover !bg-center flex items-end max-md:h-[350px] max-sm:h-[256px] max-sm:p-2 max-sm:rounded-[20px]"
             >
               <div
-                class="max-w-[935px] space-y-7 z-[2] translate-y-[calc(100%-110px)] group-hover:translate-y-0 transition duration-700 max-lg:translate-y-[calc(100%-60px)] max-md:space-y-4"
+                class="max-w-[935px] space-y-7 z-[2] translate-y-[calc(100%-110px)] group-hover:translate-y-0 transition duration-700 max-lg:translate-y-[calc(100%-50px)] max-md:space-y-4"
               >
                 <h1
                   class="text-white text-6xl max-lg:text-4xl leading-none max-sm:text-2xl max-sm:leading-[110%]"
@@ -445,7 +451,7 @@
               class="relative group overflow-hidden col-span-1 rounded-[40px] p-10 flex !bg-cover !bg-center items-end max-md:h-[350px] max-sm:h-[256px] max-sm:p-2 max-sm:rounded-[20px]"
             >
               <div
-                class="max-w-[935px] space-y-7 z-[2] translate-y-[calc(100%-110px)] group-hover:translate-y-0 transition duration-700 max-lg:translate-y-[calc(100%-60px)] max-md:space-y-4"
+                class="max-w-[935px] space-y-7 z-[2] translate-y-[calc(100%-110px)] group-hover:translate-y-0 transition duration-700 max-lg:translate-y-[calc(100%-50px)] max-md:space-y-4"
               >
                 <h1
                   class="text-white text-6xl max-lg:text-4xl leading-none max-sm:text-2xl max-sm:leading-[110%]"
@@ -476,7 +482,7 @@
               class="relative overflow-hidden group col-span-1 rounded-[40px] p-10 !bg-cover !bg-center flex items-end max-md:h-[350px] max-sm:h-[256px] max-sm:p-2 max-sm:rounded-[20px]"
             >
               <div
-                class="max-w-[935px] space-y-7 z-[2] translate-y-[calc(100%-110px)] group-hover:translate-y-0 transition duration-700 max-lg:translate-y-[calc(100%-60px)] max-md:space-y-4"
+                class="max-w-[935px] space-y-7 z-[2] translate-y-[calc(100%-110px)] group-hover:translate-y-0 transition duration-700 max-lg:translate-y-[calc(100%-50px)] max-md:space-y-4"
               >
                 <h1
                   class="text-white text-6xl max-lg:text-4xl leading-none max-sm:text-2xl max-sm:leading-[110%]"
@@ -507,7 +513,7 @@
               class="relative group overflow-hidden col-span-1 rounded-[40px] !bg-cover !bg-center p-10 flex items-end max-md:h-[350px] max-sm:h-[256px] max-sm:p-2 max-sm:rounded-[20px]"
             >
               <div
-                class="max-w-[935px] space-y-7 z-[2] translate-y-[calc(100%-110px)] group-hover:translate-y-0 transition duration-700 max-lg:translate-y-[calc(100%-60px)] max-md:space-y-4"
+                class="max-w-[935px] space-y-7 z-[2] translate-y-[calc(100%-110px)] group-hover:translate-y-0 transition duration-700 max-lg:translate-y-[calc(100%-50px)] max-md:space-y-4"
               >
                 <h1
                   class="text-white text-6xl max-lg:text-4xl leading-none max-sm:text-2xl max-sm:leading-[110%]"
@@ -537,7 +543,7 @@
       <!-- About Section -->
 
       <!-- Сooperation Section -->
-      <section title="cooperation" class="py-10">
+      <section title="cooperation" class="pt-10 max-md:pt-0">
         <div class="main-container">
           <div class="relative bg-black rounded-[40px] max-sm:rounded-[20px]">
             <div
@@ -555,7 +561,7 @@
               <img
                 src="assets/img/cooperation-1.png"
                 alt="cooperation"
-                class="absolute -top-[150px] -left-[140px] max-sm:top-auto max-sm:left-auto max-sm:-bottom-[40px] max-sm:-right-[80px] max-sm:h-[190px] max-sm:w-[177px] max-sm:-rotate-[20deg]"
+                class="absolute -top-[150px] -left-[140px] max-sm:top-auto max-sm:left-auto max-sm:-bottom-[60px] max-sm:-right-[80px] max-sm:h-[230px] max-sm:-rotate-[20deg]"
               />
               <img
                 src="assets/img/cooperation-2.png"
@@ -564,7 +570,7 @@
               />
               <form
                 id="confirmation-form"
-                class="space-y-[48px] max-sm:space-y-7"
+                class="space-y-[48px] max-sm:space-y-5"
               >
                 <h1
                   class="text-center text-white text-6xl tracking-[0.3px] max-lg:text-4xl max-sm:text-2xl"
@@ -572,7 +578,7 @@
                   Сотрудничество
                 </h1>
                 <div
-                  class="grid grid-cols-repeat_cooperation justify-center gap-x-10 gap-y-7 items-center max-sm:gap-y-7"
+                  class="grid grid-cols-repeat_cooperation justify-center gap-x-10 gap-y-7 items-center max-sm:gap-y-[15px]"
                 >
                   <input
                     id="name"
@@ -604,7 +610,7 @@
                     placeholder="Telegram (если есть)"
                     class="input max-[880px]:row-start-5"
                   />
-                  <div class="flex gap-4">
+                  <div class="flex gap-4 max-sm:pt-3">
                     <div class="w-[20px] h-[20px] pt-1">
                       <input
                         id="is-confirm-policy"
@@ -634,11 +640,13 @@
                     placeholder="Название сети (если есть)"
                     class="input max-[880px]:row-start-6"
                   />
-                  <button
-                    class="btn-m !py-1 !text-base !rounded-[10px] !w-[214px]"
-                  >
-                    Отправить заявку
-                  </button>
+                  <div class="flex items-center max-sm:pt-2.5">
+                    <button
+                      class="btn-m !py-1 !text-base !rounded-[10px] !w-[214px] max-sm:!text-xs max-sm:!py-1.5 max-sm:!w-[173px]"
+                    >
+                      Отправить заявку
+                    </button>
+                  </div>
                 </div>
               </form>
               <div id="submited-form" class="hidden">
@@ -671,19 +679,20 @@
         <div class="main-container">
           <div class="space-y-14 max-sm:space-y-7">
             <!-- Section Title -->
-            <div class="text-center space-y-3.5 max-sm:space-y-3">
+            <div class="text-center space-y-3.5 max-sm:space-y-1">
               <h1 class="text-white text-6xl max-md:text-5xl max-sm:text-2xl">
                 Карта магазинов
               </h1>
               <p
                 class="text-zinc-500 tracking-[0.3px] max-md:text-sm max-sm:text-xs"
               >
-                Найдите свой SOAK среди 5897 магазинов
+                Найдите свой SOAK <br class="md:hidden" />
+                среди 5897 магазинов
               </p>
             </div>
             <!-- Section Title -->
 
-            <div class="space-y-8 max-sm:space-y-7">
+            <div class="space-y-8 max-sm:space-y-5">
               <div
                 class="relative h-[440px] rounded-[40px] max-sm:rounded-[20px] max-sm:h-[400px] overflow-hidden"
               >
@@ -696,7 +705,7 @@
               <div class="text-center">
                 <a
                   href=""
-                  class="text-white tracking-[1px] underline max-sm:text-xs"
+                  class="text-white tracking-[1px] underline max-sm:text-xs max-sm:tracking-[0.3px]"
                   >Добавь свой магазин</a
                 >
               </div>
@@ -709,11 +718,11 @@
       <!-- Popular Section -->
       <section title="popular">
         <div class="main-container">
-          <div class="space-y-10 max-sm:space-y-7">
+          <div class="space-y-10 max-sm:space-y-3">
             <!-- Section Title -->
             <div class="text-center space-y-3.5 max-sm:space-y-3">
               <h1
-                class="text-white text-6xl tracking-[0.3px] max-md:text-5xl max-sm:text-2xl"
+                class="text-white text-6xl tracking-[0.3px] max-md:text-5xl max-sm:text-2xl max-sm:!leading-[26.4px]"
               >
                 Популярные продукты
               </h1>
@@ -726,11 +735,11 @@
                   <div class="swiper-slide">
                     <!-- Product Item -->
                     <div
-                      class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:scale-105"
+                      class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:hover:scale-105"
                     >
                       <a
                         href="product.html"
-                        class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:py-4 max-sm:px-6 max-sm:rounded-[20px]"
+                        class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:gap-y-3 max-sm:py-[18px] max-sm:px-[25px] max-sm:rounded-[20px]"
                       >
                         <div class="relative">
                           <span
@@ -742,11 +751,11 @@
                             class="group-hover:rotate-6 transition duration-700 relative z-[1]"
                           />
                         </div>
-                        <span class="flex justify-center">
+                        <span class="">
                           <img
                             src="assets/img/products/models/l.png"
                             alt="l"
-                            class="h-5 w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
+                            class="h-5 mx-auto w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
                           />
                         </span>
                       </a>
@@ -759,11 +768,11 @@
                   <div class="swiper-slide">
                     <!-- Product Item -->
                     <div
-                      class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:scale-105"
+                      class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:hover:scale-105"
                     >
                       <a
                         href="product.html"
-                        class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:py-4 max-sm:px-6 max-sm:rounded-[20px]"
+                        class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:gap-y-3 max-sm:py-[18px] max-sm:px-[25px] max-sm:rounded-[20px]"
                       >
                         <div class="relative">
                           <span
@@ -775,11 +784,11 @@
                             class="group-hover:rotate-6 transition duration-700 relative z-[1]"
                           />
                         </div>
-                        <span class="flex justify-center">
+                        <span class="">
                           <img
                             src="assets/img/products/models/m.png"
                             alt="m"
-                            class="h-5 w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
+                            class="h-5 mx-auto w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
                           />
                         </span>
                       </a>
@@ -792,11 +801,11 @@
                   <div class="swiper-slide">
                     <!-- Product Item -->
                     <div
-                      class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:scale-105"
+                      class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:hover:scale-105"
                     >
                       <a
                         href="product.html"
-                        class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:py-4 max-sm:px-6 max-sm:rounded-[20px]"
+                        class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:gap-y-3 max-sm:py-[18px] max-sm:px-[25px] max-sm:rounded-[20px]"
                       >
                         <div class="relative">
                           <span
@@ -808,11 +817,11 @@
                             class="group-hover:rotate-6 transition duration-700 relative z-[1]"
                           />
                         </div>
-                        <span class="flex justify-center">
+                        <span class="">
                           <img
                             src="assets/img/products/models/q.png"
                             alt="q"
-                            class="h-5 w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
+                            class="h-5 mx-auto w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
                           />
                         </span>
                       </a>
@@ -825,11 +834,11 @@
                   <div class="swiper-slide">
                     <!-- Product Item -->
                     <div
-                      class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:scale-105"
+                      class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:hover:scale-105"
                     >
                       <a
                         href="product.html"
-                        class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:py-4 max-sm:px-6 max-sm:rounded-[20px]"
+                        class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:gap-y-3 max-sm:py-[18px] max-sm:px-[25px] max-sm:rounded-[20px]"
                       >
                         <div class="relative">
                           <span
@@ -841,11 +850,11 @@
                             class="group-hover:rotate-6 transition duration-700 relative z-[1]"
                           />
                         </div>
-                        <span class="flex justify-center">
+                        <span class="">
                           <img
                             src="assets/img/products/models/r.png"
                             alt="r"
-                            class="h-5 w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
+                            class="h-5 mx-auto w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
                           />
                         </span>
                       </a>

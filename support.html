@@ -20,7 +20,7 @@
           <button
             id="burger-menu-btn"
             onclick="openCloseMenu()"
-            class="hidden relative w-[18px] h-[18px] max-md:block transition-all duration-700"
+            class="hidden relative w-[18px] h-[18px] max-md:block transition-all duration-700 mx-2"
           >
             <span
               class="absolute w-full h-0.5 bg-white left-0 top-0 transition-all duration-700 rounded"
@@ -86,7 +86,7 @@
             </nav>
           </div>
           <button
-            class="px-0.5 h-full max-lg:px-0 max-lg:pl-4"
+            class="px-0.5 h-full max-lg:px-0 max-lg:pl-4 max-md:px-2"
             onclick="handleToggleSearch()"
           >
             <img src="assets/icons/search.svg" alt="search" />
@@ -101,7 +101,7 @@
         <div class="main-container h-full">
           <div
             id="header-sublinks-block"
-            class="h-full flex flex-col gap-y-[17px] items-center pb-8 pt-4"
+            class="h-full flex flex-col gap-y-[17px] items-center justify-center pb-8 pt-4"
           ></div>
         </div>
       </div>
@@ -112,12 +112,14 @@
         class="fixed top-[75px] left-0 w-full h-[275px] opacity-0 pointer-events-none transition duration-700 max-md:h-full max-md:top-[55px]"
       >
         <div class="main-container h-full">
-          <div class="h-full flex flex-col gap-y-9 pt-[40px] max-md:pt-[30px]">
+          <div
+            class="h-full flex flex-col gap-y-9 pt-[40px] max-md:pt-[22px] max-md:gap-y-[38px]"
+          >
             <div class="flex items-center gap-x-4">
               <img
                 src="assets/icons/search.svg"
                 alt="search"
-                class="opacity-70 w-[20px] h-[20px]"
+                class="opacity-70 w-[20px] h-[20px] max-md:w-[16px] max-md:h-[16px] max-md:ml-2"
               />
               <input
                 type="text"
@@ -125,9 +127,11 @@
                 class="text-white bg-transparent tracking-[0.3px] border-none outline-none ring-0 placeholder:text-zinc-500"
               />
             </div>
-            <div class="flex flex-col gap-y-6">
-              <h1 class="text-zinc-500 text-xs">Возможно вы искали:</h1>
-              <div class="space-y-[7px]">
+            <div class="flex flex-col gap-y-6 max-md:gap-y-[22px]">
+              <h1 class="text-zinc-500 tracking-[0.3px] text-xs">
+                Возможно вы искали:
+              </h1>
+              <div class="space-y-[7px] max-md:space-y-[12px]">
                 <a href="" class="text-white block text-xs"
                   ><font class="text-zinc-500 tracking-[0.3px]">→</font> SOAK
                   X</a
@@ -153,11 +157,11 @@
       <!-- Header Menu -->
       <div
         id="header-menu"
-        class="fixed top-[55px] left-0 h-[calc(100%-55px)] w-full opacity-0 pointer-events-none transition duration-700 pt-[60px]"
+        class="fixed top-[55px] left-0 h-[calc(100%-55px)] w-full opacity-0 pointer-events-none transition duration-700 pt-[65px]"
       >
         <div class="main-container h-full">
           <div class="flex flex-col h-full">
-            <div class="flex flex-col gap-y-[20px] items-center">
+            <div class="flex flex-col gap-y-[22px] items-center">
               <a
                 href="index.html"
                 class="text-zinc-500 hover:text-white active:text-white transition duration-700"
@@ -185,10 +189,10 @@
               >
             </div>
             <div
-              class="flex flex-col flex-1 items-center justify-end gap-y-[25px] pb-[40px]"
+              class="flex flex-col flex-1 items-center justify-end gap-y-[20px]"
             >
               <div
-                class="flex items-center gap-x-[30px] justify-end max-sm:justify-center"
+                class="flex items-center gap-x-[25px] justify-end max-sm:justify-center"
               >
                 <a
                   href=""
@@ -235,14 +239,14 @@
                   />
                 </a>
               </div>
-              <div class="flex flex-col items-center gap-y-[15px]">
+              <div class="flex flex-col items-center gap-y-[7px]">
                 <a
                   href=""
-                  class="text-zinc-500 text-right text-xs uppercase hover:text-white transition duration-700 whitespace-nowrap max-md:text-[10px] max-sm:text-center"
+                  class="text-zinc-500 text-right text-xs tracking-[0.3px] uppercase hover:text-white transition duration-700 whitespace-nowrap max-md:text-[10px] max-sm:text-center"
                   >ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a
                 >
                 <p
-                  class="text-zinc-500 text-right text-xs max-md:text-[10px] max-sm:text-center"
+                  class="text-zinc-500 text-right tracking-[0.3px] text-xs max-md:text-[10px] max-sm:text-center"
                 >
                   ©2024. ВСЕ ПРАВА ЗАЩИЩЕНЫ
                 </p>
@@ -263,21 +267,21 @@
 
     <main
       id="main"
-      class="overflow-hidden space-y-20 py-20 max-sm:space-y-10 max-sm:py-10"
+      class="overflow-hidden space-y-[75px] py-[75px] max-sm:space-y-[35px] max-sm:py-[35px]"
     >
       <!-- Authentication Check Section -->
       <section title="authentication-check">
         <div class="main-container">
           <div
-            class="group bg-black overflow-hidden space-y-10 rounded-[40px] p-10 max-sm:rounded-[20px] max-md:space-y-9 max-sm:py-4 max-sm:px-[25px] max-md:h-[500px] max-sm:h-[400px]"
+            class="group bg-black overflow-hidden space-y-10 rounded-[40px] p-10 max-sm:rounded-[20px] max-md:space-y-3 max-sm:py-4 max-sm:px-[25px] max-md:h-[500px] max-sm:h-[400px]"
           >
             <h1
               class="text-white text-center text-[42px] max-md:text-2xl tracking-[0.3px] leading-none max-sm:leading-[110%]"
             >
-              Проверка на подлинность
+              Проверка <br class="md:hidden"> на подлинность
             </h1>
             <div
-              class="relative grid grid-cols-3 gap-x-7 items-center flex-1 max-md:block max-md:space-y-7"
+              class="relative grid grid-cols-3 gap-x-7 items-center flex-1 max-md:block max-md:space-y-0"
             >
               <div
                 class="flex opacity-70 group-hover:opacity-100 transition duration-700 max-md:hidden"
@@ -300,7 +304,7 @@
                 </div>
               </div>
               <div
-                class="space-y-7 max-[1040px]:space-y-5 max-[960px]:space-y-3"
+                class="space-y-7 max-[1040px]:space-y-5"
               >
                 <div class="flex items-center justify-center pt-3 gap-x-2">
                   <h1
@@ -315,14 +319,14 @@
                     <img src="assets/icons/info.svg" alt="info" />
                   </button>
                 </div>
-                <form class="w-full space-y-8">
+                <form class="w-full space-y-8 max-md:space-y-5">
                   <input
                     id="device-number"
                     type="text"
-                    class="input !w-full !text-base !py-2.5 max-w-full tracking-[0.3px] leading-[22.4px] text-center !rounded-[15px]"
+                    class="input !w-full !text-base !py-2.5 max-w-full tracking-[0.3px] leading-[22.4px] text-center !rounded-[15px] max-sm:!text-xs max-sm:!py-3.5"
                   />
                   <button
-                    class="btn-m !w-[170px] !text-base !py-0.5 !rounded-[10px] mx-auto leading-[140%]"
+                    class="btn-m !w-[170px] !text-base !py-0.5 !rounded-[10px] mx-auto leading-[140%] max-md:!text-xs max-sm:!py-1.5 max-sm:!w-[140px]"
                   >
                     Подтвердить
                   </button>
@@ -354,7 +358,7 @@
                 </div>
               </div>
               <div
-                class="absolute scale-[2] left-1/2 -translate-x-1/2 md:hidden max-[470px]:-translate-x-3/4 max-[425px]:scale-[3] max-[375px]:scale-[3.5] max-[375px]:-translate-x-[135px] max-[375px]:-bottom-[150px] pointer-events-none"
+                class="absolute scale-[2] left-1/2 -translate-x-1/2 md:hidden max-[470px]:-translate-x-3/4 max-[425px]:scale-[3] max-[375px]:scale-[3.6] max-[375px]:-translate-x-[125px] max-[375px]:-bottom-[160px] pointer-events-none"
               >
                 <img
                   src="assets/img/parsing/parsing-mobile.png"
@@ -379,50 +383,52 @@
               <video src="assets/video/fon-1.mp4" loop muted autoplay></video>
             </span>
             <div
-              class="flex-1 space-y-[47px] max-lg:space-y-4 relative z-[1] max-md:flex max-md:flex-col max-md:items-center"
+              class="flex-1 space-y-[47px] max-lg:space-y-4 relative z-[1] max-md:flex max-md:flex-col max-md:items-center max-md:space-y-2.5"
             >
               <h1
-                class="text-white text-[42px] tracking-[0.3px] max-lg:text-3xl max-md:text-center max-sm:text-2xl leading-none max-md:leading-[120%]"
+                class="text-white text-[42px] tracking-[0.3px] max-lg:text-3xl max-md:text-center max-sm:text-2xl leading-none max-md:!leading-[26.4px]"
               >
-                Бот заботы <br class="block md:hidden" />
+                Бот заботы <br class="md:hidden" />
                 в Telegram
               </h1>
               <p
-                class="text-zinc-500 tracking-[0.3px] max-lg:text-sm max-sm:text-xs max-w-[475.5px] leading-[140%]"
+                class="text-zinc-500 tracking-[0.3px] max-lg:text-sm max-sm:text-xs max-w-[475.5px] leading-[22.4px] max-sm:!leading-[16.8px]"
               >
                 <font class="text-white">
-                  Наш бот в Telegram поможет вам по любым возникающим вопросам,
+                  Наш бот в Telegram поможет вам <br class="md:hidden"> по любым возникающим вопросам,
                   например: <br class="max-md:hidden" />
                 </font>
-                Вы сможете узнать всевозможные подробности о продуктах, начать
+                Вы сможете узнать всевозможные подробности <br class="md:hidden"> о продуктах, начать
                 сотрудничество с нами, найти ближайшую торговую точку, решить
                 проблему <br class="max-md:hidden" />
                 с браком, связаться с отделом маркетинга, оставить отзыв на нашу
-                продукцию и даже устроиться к нам на работу. Бот отвечает
+                продукцию <br class="md:hidden"> и даже устроиться к нам на работу. Бот отвечает
                 круглосуточно и готов всегда помочь Вам.
               </p>
-              <button class="btn-telegram  max-md:mx-auto">
-                <svg
-                  width="50.000000"
-                  height="24.000000"
-                  viewBox="0 0 30 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                >
-                  <path
-                    id="Иконка"
-                    d="M1.62 9.77C9.63 6.28 14.98 3.98 17.65 2.87C25.29 -0.31 26.88 -0.86 27.91 -0.88C28.14 -0.88 28.65 -0.83 28.98 -0.56C29.26 -0.33 29.33 -0.03 29.37 0.18C29.4 0.4 29.45 0.89 29.41 1.27C29 5.62 27.21 16.17 26.3 21.04C25.91 23.1 25.15 23.79 24.42 23.86C22.82 24 21.61 22.8 20.06 21.79C17.64 20.2 16.28 19.21 13.93 17.67C11.21 15.88 12.97 14.89 14.52 13.29C14.92 12.87 21.96 6.47 22.1 5.89C22.11 5.81 22.13 5.54 21.97 5.4C21.81 5.26 21.57 5.3 21.4 5.34C21.16 5.4 17.29 7.95 9.8 13.01C8.7 13.76 7.71 14.13 6.82 14.11C5.83 14.09 3.95 13.56 2.54 13.1C0.82 12.54 -0.55 12.24 -0.43 11.29C-0.37 10.8 0.31 10.29 1.62 9.77Z"
-                    fill="currentColor"
-                    fill-opacity="1.000000"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-                <span
-                  >Перейти <br />
-                  в Telegram</span
-                >
-              </button>
+              <div class="max-md:pt-3">
+                <button class="btn-telegram max-md:mx-auto">
+                  <svg
+                    width="50.000000"
+                    height="24.000000"
+                    viewBox="0 0 30 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      id="Иконка"
+                      d="M1.62 9.77C9.63 6.28 14.98 3.98 17.65 2.87C25.29 -0.31 26.88 -0.86 27.91 -0.88C28.14 -0.88 28.65 -0.83 28.98 -0.56C29.26 -0.33 29.33 -0.03 29.37 0.18C29.4 0.4 29.45 0.89 29.41 1.27C29 5.62 27.21 16.17 26.3 21.04C25.91 23.1 25.15 23.79 24.42 23.86C22.82 24 21.61 22.8 20.06 21.79C17.64 20.2 16.28 19.21 13.93 17.67C11.21 15.88 12.97 14.89 14.52 13.29C14.92 12.87 21.96 6.47 22.1 5.89C22.11 5.81 22.13 5.54 21.97 5.4C21.81 5.26 21.57 5.3 21.4 5.34C21.16 5.4 17.29 7.95 9.8 13.01C8.7 13.76 7.71 14.13 6.82 14.11C5.83 14.09 3.95 13.56 2.54 13.1C0.82 12.54 -0.55 12.24 -0.43 11.29C-0.37 10.8 0.31 10.29 1.62 9.77Z"
+                      fill="currentColor"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                  <span
+                    >Перейти <br />
+                    в Telegram</span
+                  >
+                </button>
+              </div>
             </div>
             <div class="relative h-full max-md:h-[180px]">
               <img
@@ -496,19 +502,20 @@
         <div class="main-container">
           <div class="space-y-14 max-sm:space-y-7">
             <!-- Section Title -->
-            <div class="text-center space-y-3.5 max-sm:space-y-3">
+            <div class="text-center space-y-3.5 max-sm:space-y-1">
               <h1 class="text-white text-6xl max-md:text-5xl max-sm:text-2xl">
                 Карта магазинов
               </h1>
               <p
                 class="text-zinc-500 tracking-[0.3px] max-md:text-sm max-sm:text-xs"
               >
-                Найдите свой SOAK среди 5897 магазинов
+                Найдите свой SOAK <br class="md:hidden" />
+                среди 5897 магазинов
               </p>
             </div>
             <!-- Section Title -->
 
-            <div class="space-y-8 max-sm:space-y-7">
+            <div class="space-y-8 max-sm:space-y-5">
               <div
                 class="relative h-[440px] rounded-[40px] max-sm:rounded-[20px] max-sm:h-[400px] overflow-hidden"
               >
@@ -521,7 +528,7 @@
               <div class="text-center">
                 <a
                   href=""
-                  class="text-white tracking-[1px] underline max-sm:text-xs"
+                  class="text-white tracking-[1px] underline max-sm:text-xs max-sm:tracking-[0.3px]"
                   >Добавь свой магазин</a
                 >
               </div>
@@ -534,11 +541,11 @@
       <!-- Popular Section -->
       <section title="popular">
         <div class="main-container">
-          <div class="space-y-10 max-sm:space-y-7">
+          <div class="space-y-10 max-sm:space-y-3">
             <!-- Section Title -->
             <div class="text-center space-y-3.5 max-sm:space-y-3">
               <h1
-                class="text-white text-6xl tracking-[0.3px] max-md:text-5xl max-sm:text-2xl"
+                class="text-white text-6xl tracking-[0.3px] max-md:text-5xl max-sm:text-2xl max-sm:!leading-[26.4px]"
               >
                 Популярные продукты
               </h1>
@@ -551,11 +558,11 @@
                   <div class="swiper-slide">
                     <!-- Product Item -->
                     <div
-                      class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:scale-105"
+                      class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:hover:scale-105"
                     >
                       <a
                         href="product.html"
-                        class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:py-4 max-sm:px-6 max-sm:rounded-[20px]"
+                        class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:gap-y-3 max-sm:py-[18px] max-sm:px-[25px] max-sm:rounded-[20px]"
                       >
                         <div class="relative">
                           <span
@@ -567,11 +574,11 @@
                             class="group-hover:rotate-6 transition duration-700 relative z-[1]"
                           />
                         </div>
-                        <span class="flex justify-center">
+                        <span class="">
                           <img
                             src="assets/img/products/models/l.png"
                             alt="l"
-                            class="h-5 w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
+                            class="h-5 mx-auto w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
                           />
                         </span>
                       </a>
@@ -584,11 +591,11 @@
                   <div class="swiper-slide">
                     <!-- Product Item -->
                     <div
-                      class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:scale-105"
+                      class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:hover:scale-105"
                     >
                       <a
                         href="product.html"
-                        class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:py-4 max-sm:px-6 max-sm:rounded-[20px]"
+                        class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:gap-y-3 max-sm:py-[18px] max-sm:px-[25px] max-sm:rounded-[20px]"
                       >
                         <div class="relative">
                           <span
@@ -600,11 +607,11 @@
                             class="group-hover:rotate-6 transition duration-700 relative z-[1]"
                           />
                         </div>
-                        <span class="flex justify-center">
+                        <span class="">
                           <img
                             src="assets/img/products/models/m.png"
                             alt="m"
-                            class="h-5 w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
+                            class="h-5 mx-auto w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
                           />
                         </span>
                       </a>
@@ -617,11 +624,11 @@
                   <div class="swiper-slide">
                     <!-- Product Item -->
                     <div
-                      class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:scale-105"
+                      class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:hover:scale-105"
                     >
                       <a
                         href="product.html"
-                        class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:py-4 max-sm:px-6 max-sm:rounded-[20px]"
+                        class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:gap-y-3 max-sm:py-[18px] max-sm:px-[25px] max-sm:rounded-[20px]"
                       >
                         <div class="relative">
                           <span
@@ -633,11 +640,11 @@
                             class="group-hover:rotate-6 transition duration-700 relative z-[1]"
                           />
                         </div>
-                        <span class="flex justify-center">
+                        <span class="">
                           <img
                             src="assets/img/products/models/q.png"
                             alt="q"
-                            class="h-5 w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
+                            class="h-5 mx-auto w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
                           />
                         </span>
                       </a>
@@ -650,11 +657,11 @@
                   <div class="swiper-slide">
                     <!-- Product Item -->
                     <div
-                      class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:scale-105"
+                      class="group relative hover:scale-110 duration-700 max-w-[260px] min-w-[140px] max-sm:hover:scale-105"
                     >
                       <a
                         href="product.html"
-                        class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:py-4 max-sm:px-6 max-sm:rounded-[20px]"
+                        class="py-7 relative flex flex-col items-center gap-y-7 bg-black overflow-hidden rounded-[40px] max-sm:gap-y-3 max-sm:py-[18px] max-sm:px-[25px] max-sm:rounded-[20px]"
                       >
                         <div class="relative">
                           <span
@@ -666,11 +673,11 @@
                             class="group-hover:rotate-6 transition duration-700 relative z-[1]"
                           />
                         </div>
-                        <span class="flex justify-center">
+                        <span class="">
                           <img
                             src="assets/img/products/models/r.png"
                             alt="r"
-                            class="h-5 w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
+                            class="h-5 mx-auto w-auto max-sm:h-[11px] object-cover opacity-80 group-hover:opacity-100 transition duration-700"
                           />
                         </span>
                       </a>

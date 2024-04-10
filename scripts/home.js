@@ -18,7 +18,8 @@ new Swiper(".swiper-news", {
       centeredSlides: false,
     },
     320: {
-      slidesPerView: 1.4,
+      spaceBetween: 20,
+      slidesPerView: 1.32,
       centeredSlides: true,
     },
   },

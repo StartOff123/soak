@@ -1,6 +1,6 @@
 function Item(title, img) {
   return `
-    <button class="relative group flex gap-x-3 items-center py-2">
+    <button class="relative group flex gap-x-3 items-center py-2.5">
       <span
         class="relative w-1 h-5 overflow-hidden rounded-[0.5px_10px_0.5px_10px] block opacity-80 group-hover:rotate-90 group-hover:translate-x-2 group-hover:opacity-100 transition duration-700"
       >
@@ -102,7 +102,7 @@ function renderPaletteItems(type) {
 
     subarrayPaletteItems.forEach((subarray) => {
       let div = document.createElement("div");
-      div.className = "swiper-slide !grid !grid-cols-2 !gap-x-3";
+      div.className = "swiper-slide !grid !grid-cols-2 !gap-x-4";
 
       subarray.forEach((item) => {
         div.insertAdjacentHTML("beforeend", Item(item.title, item.img));

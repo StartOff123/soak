@@ -23,9 +23,9 @@ new Swiper(".swiper-colors", {
   slidesPerView: 3,
   loop: false,
   speed: 1000,
-  // autoplay: {
-  //   delay: 5000,
-  // },
+  autoplay: {
+    delay: 5000,
+  },
   breakpoints: {
     932: {
       centeredSlides: false,
