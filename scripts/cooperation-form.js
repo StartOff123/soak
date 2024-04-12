@@ -1,10 +1,26 @@
 const form = document.getElementById("confirmation-form");
 const submitedForm = document.getElementById("submited-form");
+const fo = document.getElementById("fo");
+const foList = document.getElementById("fo-list");
 
 let formHeight;
 
 document.addEventListener("DOMContentLoaded", () => {
   formHeight = form.scrollHeight;
+
+  fo.addEventListener("focus", () => {
+    foList.classList.add("!opacity-100", "!pointer-events-auto");
+    fo.classList.add("!border-white");
+  });
+
+  document.addEventListener("click", (event) => {
+    const foContainer = document.getElementById("fo-container");
+
+    if (!foContainer.contains(event.target)) {
+      foList.classList.remove("!opacity-100", "!pointer-events-auto");
+      fo.classList.remove("!border-white");
+    }
+  });
 });
 
 window.addEventListener("resize", () => {
@@ -21,13 +37,18 @@ form.addEventListener("submit", (event) => {
   submitedForm.style.height = `${formHeight}px`;
 });
 
+function handleSetFo(value) {
+  fo.value = value;
+  foList.classList.remove("!opacity-100", "!pointer-events-auto");
+  fo.classList.remove("!border-white");
+}
+
 function onValidation() {
   let errorsFiled = [];
 
   const name = document.getElementById("name");
   const phoneNumber = document.getElementById("phone-number");
   const city = document.getElementById("city");
-  const fo = document.getElementById("fo");
   const isConfirmPolicy = document.getElementById("is-confirm-policy");
 
   name.classList.remove("input-err");

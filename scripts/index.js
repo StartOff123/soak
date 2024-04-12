@@ -17,6 +17,7 @@ window.addEventListener("load", () => {
 function setMediaQuery(mediaQuery, callback) {
   if (mediaQuery.media === "(max-width: 425px)") return callback(mediaQuery);
   if (mediaQuery.media === "(max-width: 640px)") return callback(mediaQuery);
+  if (mediaQuery.media === "(max-width: 768px)") return callback(mediaQuery);
 }
 
 // Age Confirmation Popup

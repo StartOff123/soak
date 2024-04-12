@@ -31,7 +31,7 @@ function handleOpenAntiCounterfeitProtectionPopup() {
 }
 
 new IMask(document.getElementById("device-number"), {
-  mask: "XXX-XXXX-XXXX-XXXX",
+  mask: "XXXX-XXXX-XXXX-XXXX",
   definitions: {
     X: {
       mask: "0",

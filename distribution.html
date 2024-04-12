@@ -385,6 +385,7 @@
           >
             <!-- Block -->
             <div
+            id="about-block"
               style="background: url('assets/img/about-1.png')"
               class="relative group col-span-2 overflow-hidden rounded-[40px] p-10 !bg-cover !bg-center flex items-end max-md:h-[350px] max-sm:text-2xl max-sm:h-[256px] max-sm:p-2 max-sm:rounded-[20px]"
             >
@@ -416,6 +417,7 @@
 
             <!-- Block -->
             <div
+            id="about-block"
               style="background: url('assets/img/about-2.png')"
               class="relative overflow-hidden group col-span-1 rounded-[40px] p-10 !bg-cover !bg-center flex items-end max-md:h-[350px] max-sm:h-[256px] max-sm:p-2 max-sm:rounded-[20px]"
             >
@@ -447,6 +449,7 @@
 
             <!-- Block -->
             <div
+            id="about-block"
               style="background: url('assets/img/about-3.png')"
               class="relative group overflow-hidden col-span-1 rounded-[40px] p-10 flex !bg-cover !bg-center items-end max-md:h-[350px] max-sm:h-[256px] max-sm:p-2 max-sm:rounded-[20px]"
             >
@@ -478,6 +481,7 @@
 
             <!-- Block -->
             <div
+            id="about-block"
               style="background: url('assets/img/about-4.png')"
               class="relative overflow-hidden group col-span-1 rounded-[40px] p-10 !bg-cover !bg-center flex items-end max-md:h-[350px] max-sm:h-[256px] max-sm:p-2 max-sm:rounded-[20px]"
             >
@@ -509,6 +513,7 @@
 
             <!-- Block -->
             <div
+            id="about-block"
               style="background: url('assets/img/about-5.png')"
               class="relative group overflow-hidden col-span-1 rounded-[40px] !bg-cover !bg-center p-10 flex items-end max-md:h-[350px] max-sm:h-[256px] max-sm:p-2 max-sm:rounded-[20px]"
             >
@@ -543,7 +548,7 @@
       <!-- About Section -->
 
       <!-- Сooperation Section -->
-      <section title="cooperation" class="pt-10 max-md:pt-0">
+      <section title="cooperation" class="pt-10 max-md:pt-0"">
         <div class="main-container">
           <div class="relative bg-black rounded-[40px] max-sm:rounded-[20px]">
             <div
@@ -628,12 +633,49 @@
                       </a>
                     </p>
                   </div>
-                  <input
+                  <div id="fo-container" class="relative w-full max-[880px]:row-start-3">
+                    <input id="fo" type="text" readonly placeholder="Выберите ФО*" class="input !w-full max-[880px]:row-start-3"/>
+                    <div id="fo-list" class="absolute w-full top-full translate-y-2 z-[2] opacity-0 pointer-events-none transition duration-700">
+                      <div class="bg-black rounded-[10px]">
+                        <button type="button" onclick="handleSetFo('Центральный ФО')" class="text-zinc-500 hover:text-white px-6 py-4 pl-[18px] text-xs w-full text-left transition duration-700">
+                          Центральный ФО
+                        </button>
+                        <button type="button" onclick="handleSetFo('Центральный ФО, кроме Мск и МО')" class="text-zinc-500 hover:text-white px-6 py-4 pl-[18px] text-xs w-full text-left transition duration-700">
+                          Центральный ФО, кроме Мск и МО
+                        </button>
+                        <button type="button" onclick="handleSetFo('Северо-Западный ФО')" class="text-zinc-500 hover:text-white px-6 py-4 pl-[18px] text-xs w-full text-left transition duration-700">
+                          Северо-Западный ФО
+                        </button>
+                        <button type="button" onclick="handleSetFo('Южный ФО')" class="text-zinc-500 hover:text-white px-6 py-4 pl-[18px] text-xs w-full text-left transition duration-700">
+                          Южный ФО
+                        </button>
+                        <button type="button" onclick="handleSetFo('Уральский ФО')" class="text-zinc-500 hover:text-white px-6 py-4 pl-[18px] text-xs w-full text-left transition duration-700">
+                          Уральский ФО
+                        </button>
+                        <button type="button" onclick="handleSetFo('Сибирский ФО')" class="text-zinc-500 hover:text-white px-6 py-4 pl-[18px] text-xs w-full text-left transition duration-700">
+                          Сибирский ФО
+                        </button>
+                        <button type="button" onclick="handleSetFo('Приволжский ФО')" class="text-zinc-500 hover:text-white px-6 py-4 pl-[18px] text-xs w-full text-left transition duration-700">
+                          Приволжский ФО
+                        </button>
+                        <button type="button" onclick="handleSetFo('Дальневосточный ФО')" class="text-zinc-500 hover:text-white px-6 py-4 pl-[18px] text-xs w-full text-left transition duration-700">
+                          Дальневосточный ФО
+                        </button>
+                        <button type="button" onclick="handleSetFo('Не из РФ')" class="text-zinc-500 hover:text-white px-6 py-4 pl-[18px] text-xs w-full text-left transition duration-700">
+                          Не из РФ
+                        </button>
+                      </div>
+                      <span
+                        class="absolute w-[calc(100%+4px)] h-[calc(100%+4px)] -top-0.5 -left-0.5 bg-gradient-to-b from-zinc-800 to-zinc-950 -z-[1] rounded-[10px]"
+                      ></span>
+                    </div>
+                  </div>
+                  <!-- <input
                     id="fo"
                     type="text"
                     placeholder="Выберите ФО*"
                     class="input max-[880px]:row-start-3"
-                  />
+                  /> -->
                   <input
                     id="net-name"
                     type="text"
@@ -1252,5 +1294,6 @@
 
     <!------------------- These scripts are for the distribution page--------------------------->
     <script src="scripts/cooperation-form.js"></script>
+    <script src="scripts/distribution.js"></script>
   </body>
 </html>
