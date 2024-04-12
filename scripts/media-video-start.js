@@ -1,19 +1,19 @@
 const mediaStartVideo = {
   home: {
-    desktop: "assets/video/home/start.webm",
-    mobile: "assets/video/home/start-mobile.webm",
+    desktop: "assets/video/home/start.mp4",
+    mobile: "assets/video/home/start-mobile.mp4",
   },
   product: {
-    desktop: "assets/video/product/soak-q.webm",
-    mobile: "assets/video/product/soak-q-mobile.webm",
+    desktop: "assets/video/product/soak-q.mp4",
+    mobile: "assets/video/product/soak-q-mobile.mp4",
   },
   distribution: {
-    desktop: "assets/video/distribution/start.webm",
-    mobile: "assets/video/distribution/start-mobile.webm",
+    desktop: "assets/video/distribution/start.mp4",
+    mobile: "assets/video/distribution/start-mobile.mp4",
   },
   support: {
-    desktop: "assets/video/support/start.webm",
-    mobile: "assets/video/support/start-mobile.webm",
+    desktop: "assets/video/support/start.mp4",
+    mobile: "assets/video/support/start-mobile.mp4",
   },
 };
 
