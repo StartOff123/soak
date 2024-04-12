@@ -306,25 +306,25 @@
               <div
                 class="col-span-1 mx-auto text-white bg-black flex items-center overflow-hidden rounded-[40px] max-sm:rounded-[20px]"
               >
-                <video
-                  src="assets/video/product/about-q.mp4"
-                  loop
-                  playsinline
-                  autoplay
-                  muted
-                ></video>
+                <video loop playsinline autoplay muted>
+                  <source
+                    src="assets/video/product/about-q.mp4"
+                    type="video/mp4"
+                  />
+                  <source
+                    src="assets/video/product/about-q.webm"
+                    type="video/webm"
+                  />
+                </video>
               </div>
               <div
                 class="relative overflow-hidden col-span-1 text-white mx-auto bg-black min-w-[390px] flex flex-col gap-y-10 px-12 py-14 rounded-[40px] max-[920px]:min-w-[290px] max-sm:rounded-[20px] w-full max-md:px-12 max-md:py-14 max-sm:py-5 max-sm:px-4"
               >
                 <div class="absolute scale-[2.5] blur-[20px] opacity-20">
-                  <video
-                    src="assets/video/fon-1.mp4"
-                    loop
-                    muted
-                    playsinline
-                    autoplay
-                  ></video>
+                  <video loop muted playsinline autoplay>
+                    <source src="assets/video/fon-1.mp4" type="video/mp4" />
+                    <source src="assets/video/fon-1.webm" type="video/webm" />
+                  </video>
                 </div>
                 <div class="text-center space-y-[30px] max-[920px]:hidden">
                   <img
@@ -437,8 +437,11 @@
           <div class="space-y-14 max-sm:space-y-6">
             <!-- Section Title -->
             <div class="text-center space-y-3.5 max-sm:space-y-3">
-              <h1 class="text-white text-6xl max-md:text-5xl max-sm:text-2xl max-sm:!leading-[26.4px]">
-                Выбери <br class="md:hidden"> свой стиль
+              <h1
+                class="text-white text-6xl max-md:text-5xl max-sm:text-2xl max-sm:!leading-[26.4px]"
+              >
+                Выбери <br class="md:hidden" />
+                свой стиль
               </h1>
             </div>
             <!-- Section Title -->
@@ -666,13 +669,10 @@
                   class="relative h-full p-10 pb-[31px] rounded-[40px] overflow-hidden bg-black flex flex-col justify-between max-lg:py-3 max-lg:pb-5 max-lg:px-[15px] max-md:gap-y-5 max-sm:rounded-[20px]"
                 >
                   <div class="absolute scale-[2.5] blur-[20px] opacity-20">
-                    <video
-                      src="assets/video/fon-1.mp4"
-                      loop
-                      muted
-                      autoplay
-                      playsinline
-                    ></video>
+                    <video loop muted autoplay playsinline>
+                      <source src="assets/video/fon-1.mp4" type="video/mp4" />
+                      <source src="assets/video/fon-1.webm" type="video/webm" />
+                    </video>
                   </div>
                   <div
                     class="space-y-[6px] z-[1] max-xl:space-y-3 max-sm:space-y-1"
@@ -731,13 +731,16 @@
                 <div
                   class="absolute w-[180%] h-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                 >
-                  <video
-                    src="assets/video/product/imidje.mp4"
-                    loop
-                    muted
-                    playsinline
-                    autoplay
-                  ></video>
+                  <video loop muted playsinline autoplay>
+                    <source
+                      src="assets/video/product/imidje.mp4"
+                      type="video/mp4"
+                    />
+                    <source
+                      src="assets/video/product/imidje.webm"
+                      type="video/webm"
+                    />
+                  </video>
                 </div>
               </div>
             </div>
@@ -849,13 +852,10 @@
                   class="relative bg-black rounded-[40px] overflow-hidden max-md:grid max-md:grid-cols-12 max-sm:rounded-[20px]"
                 >
                   <div class="absolute scale-[2.5] blur-[20px] opacity-20">
-                    <video
-                      src="assets/video/fon-1.mp4"
-                      loop
-                      muted
-                      playsinline
-                      autoplay
-                    ></video>
+                    <video loop muted playsinline autoplay>
+                      <source src="assets/video/fon-1.mp4" type="video/mp4" />
+                      <source src="assets/video/fon-1.mp4" type="video/webm" />
+                    </video>
                   </div>
 
                   <div
@@ -1191,7 +1191,10 @@
       <span
         class="absolute w-full h-full flex items-center justify-center scale-[2.5] opacity-15 blur-[10px] max-sm:scale-[6]"
       >
-        <video src="assets/video/fon-1.mp4" loop muted autoplay playsinline></video>
+        <video loop muted playsinline autoplay>
+          <source src="assets/video/fon-1.mp4" type="video/mp4" />
+          <source src="assets/video/fon-1.mp4" type="video/webm" />
+        </video>
       </span>
       <div
         class="main-container space-y-[52px] relative z-[1] pt-[60px] pb-10 max-sm:space-y-10 max-sm:pt-[30px] max-sm:pb-[10px]"
@@ -1624,7 +1627,6 @@
     <script src="scripts/header.js"></script>
     <script src="scripts/pupup.js"></script>
     <script src="scripts/index.js"></script>
-    <script src="scripts/play-pause-observer.js"></script>
     <script src="scripts/media-video-start.js"></script>
 
     <!------------------- These scripts are for the product page--------------------------->

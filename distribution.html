@@ -66,7 +66,7 @@
                 id="header-link"
                 data-page="distribution"
                 href="distribution.html"
-                class="text-zinc-500 hover:text-white h-full flex items-center transition duration-700  link-active"
+                class="text-zinc-500 hover:text-white h-full flex items-center transition duration-700 link-active"
                 >Дистрибуция</a
               >
               <a
@@ -283,7 +283,8 @@
               <p
                 class="text-zinc-500 tracking-[0.3px] max-md:text-sm max-sm:text-xs"
               >
-                разложим по полочкам почему <br class="md:hidden"> вы должны выбрать нас
+                разложим по полочкам почему <br class="md:hidden" />
+                вы должны выбрать нас
               </p>
             </div>
             <!-- Section Title -->
@@ -297,13 +298,10 @@
                 <span
                   class="absolute scale-[1] blur-[50px] opacity-20 top-1/2 -translate-y-1/2 -right-[270px] max-md:top-1/2 max-md:-translate-y-1/2 max-md:right-auto max-md:scale-[3] max-md:blur-[20px]"
                 >
-                  <video
-                    src="assets/video/fon-1.mp4"
-                    loop
-                    muted
-                    playsinline
-                    autoplay
-                  ></video>
+                  <video loop muted playsinline autoplay>
+                    <source src="assets/video/fon-1.mp4" type="video/mp4" />
+                    <source src="assets/video/fon-1.webm" type="video/webm" />
+                  </video>
                 </span>
               </div>
               <div class="flex-1 space-y-3 max-lg:space-y-2">
@@ -316,12 +314,14 @@
                   class="text-zinc-500 pb-12 leading-[22.4px] tracking-[0.3px] max-[885px]:text-sm max-md:pb-[14px] max-sm:text-xs max-sm:leading-[16.8px]"
                 >
                   Один из самых упоминаемых брендов <br class="max-md:hidden" />
-                  одноразовых ЭСДН <br class="md:hidden"> в России в 2023 году
+                  одноразовых ЭСДН <br class="md:hidden" />
+                  в России в 2023 году
                   <br class="max-md:hidden" />
                   по данным Fedotov Group <br /><br />
                   Один из самых упоминаемых брендов жидкостей
                   <br class="max-md:hidden" />
-                  для ЭСДН <br class="md:hidden"> в России в 2023 году по данным
+                  для ЭСДН <br class="md:hidden" />
+                  в России в 2023 году по данным
                   <br class="max-md:hidden" />
                   Fedotov Group <br /><br />
                   Победитель конкурса "Наша марка" <br />
@@ -386,7 +386,7 @@
           >
             <!-- Block -->
             <div
-            id="about-block"
+              id="about-block"
               style="background: url('assets/img/about-1.png')"
               class="relative group col-span-2 overflow-hidden rounded-[40px] p-10 !bg-cover !bg-center flex items-end max-md:h-[350px] max-sm:text-2xl max-sm:h-[256px] max-sm:p-2 max-sm:rounded-[20px]"
             >
@@ -418,7 +418,7 @@
 
             <!-- Block -->
             <div
-            id="about-block"
+              id="about-block"
               style="background: url('assets/img/about-2.png')"
               class="relative overflow-hidden group col-span-1 rounded-[40px] p-10 !bg-cover !bg-center flex items-end max-md:h-[350px] max-sm:h-[256px] max-sm:p-2 max-sm:rounded-[20px]"
             >
@@ -450,7 +450,7 @@
 
             <!-- Block -->
             <div
-            id="about-block"
+              id="about-block"
               style="background: url('assets/img/about-3.png')"
               class="relative group overflow-hidden col-span-1 rounded-[40px] p-10 flex !bg-cover !bg-center items-end max-md:h-[350px] max-sm:h-[256px] max-sm:p-2 max-sm:rounded-[20px]"
             >
@@ -482,7 +482,7 @@
 
             <!-- Block -->
             <div
-            id="about-block"
+              id="about-block"
               style="background: url('assets/img/about-4.png')"
               class="relative overflow-hidden group col-span-1 rounded-[40px] p-10 !bg-cover !bg-center flex items-end max-md:h-[350px] max-sm:h-[256px] max-sm:p-2 max-sm:rounded-[20px]"
             >
@@ -514,7 +514,7 @@
 
             <!-- Block -->
             <div
-            id="about-block"
+              id="about-block"
               style="background: url('assets/img/about-5.png')"
               class="relative group overflow-hidden col-span-1 rounded-[40px] !bg-cover !bg-center p-10 flex items-end max-md:h-[350px] max-sm:h-[256px] max-sm:p-2 max-sm:rounded-[20px]"
             >
@@ -549,20 +549,22 @@
       <!-- About Section -->
 
       <!-- Сooperation Section -->
-      <section title="cooperation" class="pt-10 max-md:pt-0"">
+      <section title="cooperation" class="pt-10 max-md:pt-0">
         <div class="main-container">
           <div class="relative bg-black rounded-[40px] max-sm:rounded-[20px]">
             <div
               class="absolute top-0 left-0 size-full opacity-15 overflow-hidden rounded-[40px] max-sm:rounded-[20px]"
             >
               <video
-                src="assets/video/fon-1.mp4"
                 loop
                 muted
                 playsinline
                 autoplay
                 class="blur-[10px] scale-[3]"
-              ></video>
+              >
+                <source src="assets/video/fon-1.mp4" type="video/mp4" />
+                <source src="assets/video/fon-1.webm" type="video/webm" />
+              </video>
             </div>
             <div class="z-[1] relative py-10 px-[60px] max-sm:py-5 max-sm:px-4">
               <img
@@ -635,35 +637,83 @@
                       </a>
                     </p>
                   </div>
-                  <div id="fo-container" class="relative w-full max-[880px]:row-start-3">
-                    <input id="fo" type="text" readonly placeholder="Выберите ФО*" class="input !w-full max-[880px]:row-start-3"/>
-                    <div id="fo-list" class="absolute w-full top-full translate-y-2 z-[2] opacity-0 pointer-events-none transition duration-700">
+                  <div
+                    id="fo-container"
+                    class="relative w-full max-[880px]:row-start-3"
+                  >
+                    <input
+                      id="fo"
+                      type="text"
+                      readonly
+                      placeholder="Выберите ФО*"
+                      class="input !w-full max-[880px]:row-start-3"
+                    />
+                    <div
+                      id="fo-list"
+                      class="absolute w-full top-full translate-y-2 z-[2] opacity-0 pointer-events-none transition duration-700"
+                    >
                       <div class="bg-black rounded-[10px]">
-                        <button type="button" onclick="handleSetFo('Центральный ФО')" class="text-zinc-500 hover:text-white px-6 py-4 pl-[18px] text-xs w-full text-left transition duration-700">
+                        <button
+                          type="button"
+                          onclick="handleSetFo('Центральный ФО')"
+                          class="text-zinc-500 hover:text-white px-6 py-4 pl-[18px] text-xs w-full text-left transition duration-700"
+                        >
                           Центральный ФО
                         </button>
-                        <button type="button" onclick="handleSetFo('Центральный ФО, кроме Мск и МО')" class="text-zinc-500 hover:text-white px-6 py-4 pl-[18px] text-xs w-full text-left transition duration-700">
+                        <button
+                          type="button"
+                          onclick="handleSetFo('Центральный ФО, кроме Мск и МО')"
+                          class="text-zinc-500 hover:text-white px-6 py-4 pl-[18px] text-xs w-full text-left transition duration-700"
+                        >
                           Центральный ФО, кроме Мск и МО
                         </button>
-                        <button type="button" onclick="handleSetFo('Северо-Западный ФО')" class="text-zinc-500 hover:text-white px-6 py-4 pl-[18px] text-xs w-full text-left transition duration-700">
+                        <button
+                          type="button"
+                          onclick="handleSetFo('Северо-Западный ФО')"
+                          class="text-zinc-500 hover:text-white px-6 py-4 pl-[18px] text-xs w-full text-left transition duration-700"
+                        >
                           Северо-Западный ФО
                         </button>
-                        <button type="button" onclick="handleSetFo('Южный ФО')" class="text-zinc-500 hover:text-white px-6 py-4 pl-[18px] text-xs w-full text-left transition duration-700">
+                        <button
+                          type="button"
+                          onclick="handleSetFo('Южный ФО')"
+                          class="text-zinc-500 hover:text-white px-6 py-4 pl-[18px] text-xs w-full text-left transition duration-700"
+                        >
                           Южный ФО
                         </button>
-                        <button type="button" onclick="handleSetFo('Уральский ФО')" class="text-zinc-500 hover:text-white px-6 py-4 pl-[18px] text-xs w-full text-left transition duration-700">
+                        <button
+                          type="button"
+                          onclick="handleSetFo('Уральский ФО')"
+                          class="text-zinc-500 hover:text-white px-6 py-4 pl-[18px] text-xs w-full text-left transition duration-700"
+                        >
                           Уральский ФО
                         </button>
-                        <button type="button" onclick="handleSetFo('Сибирский ФО')" class="text-zinc-500 hover:text-white px-6 py-4 pl-[18px] text-xs w-full text-left transition duration-700">
+                        <button
+                          type="button"
+                          onclick="handleSetFo('Сибирский ФО')"
+                          class="text-zinc-500 hover:text-white px-6 py-4 pl-[18px] text-xs w-full text-left transition duration-700"
+                        >
                           Сибирский ФО
                         </button>
-                        <button type="button" onclick="handleSetFo('Приволжский ФО')" class="text-zinc-500 hover:text-white px-6 py-4 pl-[18px] text-xs w-full text-left transition duration-700">
+                        <button
+                          type="button"
+                          onclick="handleSetFo('Приволжский ФО')"
+                          class="text-zinc-500 hover:text-white px-6 py-4 pl-[18px] text-xs w-full text-left transition duration-700"
+                        >
                           Приволжский ФО
                         </button>
-                        <button type="button" onclick="handleSetFo('Дальневосточный ФО')" class="text-zinc-500 hover:text-white px-6 py-4 pl-[18px] text-xs w-full text-left transition duration-700">
+                        <button
+                          type="button"
+                          onclick="handleSetFo('Дальневосточный ФО')"
+                          class="text-zinc-500 hover:text-white px-6 py-4 pl-[18px] text-xs w-full text-left transition duration-700"
+                        >
                           Дальневосточный ФО
                         </button>
-                        <button type="button" onclick="handleSetFo('Не из РФ')" class="text-zinc-500 hover:text-white px-6 py-4 pl-[18px] text-xs w-full text-left transition duration-700">
+                        <button
+                          type="button"
+                          onclick="handleSetFo('Не из РФ')"
+                          class="text-zinc-500 hover:text-white px-6 py-4 pl-[18px] text-xs w-full text-left transition duration-700"
+                        >
                           Не из РФ
                         </button>
                       </div>
@@ -925,7 +975,10 @@
       <span
         class="absolute w-full h-full flex items-center justify-center scale-[2.5] opacity-15 blur-[10px] max-sm:scale-[6]"
       >
-        <video src="assets/video/fon-1.mp4" loop muted autoplay playsinline></video>
+        <video loop muted autoplay playsinline>
+          <source src="assets/video/fon-1.mp4" type="video/mp4" />
+          <source src="assets/video/fon-1.webm" type="video/webm" />
+        </video>
       </span>
       <div
         class="main-container space-y-[52px] relative z-[1] pt-[60px] pb-10 max-sm:space-y-10 max-sm:pt-[30px] max-sm:pb-[10px]"
@@ -1289,7 +1342,6 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="scripts/header.js"></script>
-    <script src="scripts/play-pause-observer.js"></script>
     <script src="scripts/pupup.js"></script>
     <script src="scripts/index.js"></script>
     <script src="scripts/media-video-start.js"></script>
